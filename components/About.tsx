@@ -24,8 +24,8 @@ const About = () => {
           className="py-4"
         />
       </div>
-      <div className="aboutContent px-10 gap-10">
-        <div className="max-w-96">
+      <div className="flex px-10 gap-10">
+        <div className="max-w-96 flex flex-1 flex-col items-center">
           <h3>Who am I?</h3>
           <p>
             I am a FullStack web developer, capable of building both the Front-End and the Back-End of your website or web application. You can check out some of my work in the Projects section.
@@ -36,7 +36,7 @@ const About = () => {
         </div>
         <div>
           <h3>My Stack</h3>
-          <div className="stack flex gap-8 flex-wrap">
+          <div className="max-w-[470px] flex gap-8 flex-wrap">
             <StackIcon 
               id="Symfony"
             />

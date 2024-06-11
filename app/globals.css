@@ -68,24 +68,8 @@ h3 {
   place-items: center;
 }
 
-.aboutContent {
-  display: flex;
-
-}
-
-.aboutContent>div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stack {
-  max-width: 470px;
-}
-
 .stackItem {
-  width: 72px;
+  @apply w-[72px]
 }
 
 @keyframes wheel {
