@@ -12,11 +12,11 @@ const Hero = () => {
         className="bgImg"
         fill
       />
-      <div className="relative px-14 py-14">
-        <h1 className="text-5xl">
+      <div className="relative sm:p-14 p-6">
+        <h1 className="text-3xl sm:text-5xl">
           Hi, I&apos;m Remy Zins
         </h1>
-        <p className="text-2xl max-w-[550px]">A FullStack developper crafting fully personalized web solutions with precision and passion</p>
+        <p className="text-lg sm:text-2xl max-w-[550px]">A FullStack developper crafting fully personalized web solutions with precision and passion</p>
       </div>
       <div className="absolute left-0 top-0 grid place-items-center h-full w-full">        
         <Button 
@@ -24,8 +24,8 @@ const Hero = () => {
           title="PROJECTS"
         />
       </div>
-      <div className="h-full flex items-center z-10 absolute top-0 left-0">
-        <div className="flex flex-col gap-2 bg-white p-2 rounded">
+      <div className="sm:h-full flex items-center z-10 absolute bottom-0 w-full justify-center sm:max-w-fit sm:top-0 left-0">
+        <div className="flex flex-row max-w-fit sm:flex-col gap-2 bg-white p-2 rounded">
           <a href="https://www.linkedin.com/in/remyzins/" target="blank">
             <Image
               src="/LinkedIn.svg" 
@@ -44,7 +44,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="mouseContainer py-4">
+      <div className="mouseContainer py-4 hidden sm:grid">
         <div className="mouse"></div>
       </div>
     </section>
