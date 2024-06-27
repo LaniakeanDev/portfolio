@@ -19,7 +19,7 @@ const About = () => {
           alt="Profile Picture"
           width={120}
           height={120}
-          className="py-4"
+          className="py-4 sm:pt-8"
         />
       </div>
       <div className="flex flex-col items-center md:flex-row gap-10 justify-around w-full mb-32">
