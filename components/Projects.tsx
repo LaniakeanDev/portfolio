@@ -10,8 +10,8 @@ const Projects = () => {
         fill
       />
       <h2 className="mb-10">Projects</h2>
-      <p className="text-2xl text-center lg:mb-40">An overview of a few projects I have worked on</p>
-      <div className="flex gap-32 items-center">
+      <p className="text-2xl text-center mb-10 lg:mb-40">An overview of a few projects I have worked on</p>
+      <div className="flex flex-col-reverse gap-10 lg:flex-row lg:gap-32 items-center">
         <div className="h-80 w-[435px] relative">      
           <Image
             src="/latresse.jpg" 
