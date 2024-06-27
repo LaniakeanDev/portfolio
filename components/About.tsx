@@ -5,14 +5,12 @@ import Button from "./Button"
 
 const About = () => {
   return (
-    <div className="full relative h-screen">
+    <section className="full relative">
       <Image
         src="/about-bg.png" 
         alt="Fractal Background Image"
-        // layout="fill" 
-        // objectFit="cover"
-        className="z-0 bgImg"
-        fill={true}
+        className="bgImg"
+        fill
       />
       <div className="grid place-items-center py-10">
         <h2>About Me</h2>
@@ -55,7 +53,7 @@ const About = () => {
           title="CONTACT ME"
         />
       </div>
-    </div>
+    </section>
   )
 }
 

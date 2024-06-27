@@ -3,16 +3,14 @@ import Button from "./Button"
 
 const Hero = () => {
   return (
-    <div
+    <section
       className="w-full relative hero-container"
     >
       <Image
         src="/hero.png" 
         alt="Fractal Background Image"
-        // layout="fill" 
-        // objectFit="cover"
-        className="z-0 bgImg"
-        fill={true}
+        className="bgImg"
+        fill
       />
       <div className="z-10 relative px-14 py-14">
         <h1 className="text-5xl">
@@ -49,7 +47,7 @@ const Hero = () => {
       <div className="mouseContainer py-4">
         <div className="mouse"></div>
       </div>
-    </div>
+    </section>
   )
 }
 
