@@ -12,13 +12,13 @@ const Hero = () => {
         className="bgImg"
         fill
       />
-      <div className="z-10 relative px-14 py-14">
+      <div className="relative px-14 py-14">
         <h1 className="text-5xl">
           Hi, I&apos;m Remy Zins
         </h1>
         <p className="text-2xl max-w-[550px]">A FullStack developper crafting fully personalized web solutions with precision and passion</p>
       </div>
-      <div className="z-10 absolute left-0 top-0 grid place-items-center h-full w-full">        
+      <div className="absolute left-0 top-0 grid place-items-center h-full w-full">        
         <Button 
           type="button"
           title="PROJECTS"
