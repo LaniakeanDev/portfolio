@@ -20,11 +20,11 @@ body {
 }
 
 h2 {
-  @apply text-[40px]
+  @apply sm:text-[40px] text-3xl
 }
 
 h3 {
-  @apply text-[32px] text-center
+  @apply sm:text-[32px] text-center text-2xl
 }
 
 .hero-container {
