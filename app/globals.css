@@ -72,6 +72,16 @@ h3 {
   @apply w-[72px]
 }
 
+.scrollToTopButton {
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.scrollToTopButton.visible {
+  opacity: 1;
+}
+
+
 @keyframes wheel {
   to {
       opacity: 0;
