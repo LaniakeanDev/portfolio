@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         "pfBlue": "#00033A",
         "pfLightBlue": "#262A7C",
+        "pfVeryLightBlue": "#898EEB",
         "pfYellow": "#FFDB4D",
         "pfDark": "#00033A",
       }
