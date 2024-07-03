@@ -12,6 +12,7 @@ const Hero = () => {
         className="bgImg"
         fill
       />
+      <p className="absolute top-0 right-0 text-xs mr-2 text-pfVeryLightBlue">This website was made with Next.js</p>
       <div className="relative sm:p-14 p-6">
         <h1 className="text-3xl sm:text-5xl">
           Hi, I&apos;m Remy Zins
