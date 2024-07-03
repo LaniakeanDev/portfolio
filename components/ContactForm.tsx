@@ -38,7 +38,7 @@ function ContactForm() {
   return (
     <form 
       onSubmit={handleSubmit(submitHandler)}
-      className="max-w-[600px] sm:p-16 bg-pfLightBlue rounded-md"
+      className="max-w-[600px] p-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md"
     >
       <input 
         type="text" 
@@ -104,14 +104,13 @@ function ContactForm() {
           />
         </div>
         <p className="w-[90%] text-xs mb-6">
-          Je consens au traitement des informations saisies. Pour en
-            savoir plus [sur mes droits et les finalités du traitement], je consulte la politique de confidentialité
-            [LIEN]
+          I consent to the processing of the information entered. To learn more [about my rights and the purposes of the processing], I consult the privacy policy.
+            [LINK]
         </p>
       </div>
       <div className="w-full grid place-items-end">
         <button
-          className={`py-2 sm:!w-96 ${!isValid || !gdprAcceptedIsChecked ? 'opacity-50 !cursor-default' : ''} bg-pfYellow rounded-md cursor-pointer max-w-40 grid place-items-center text-black`}
+          className={`py-2 w-96 ${!isValid || !gdprAcceptedIsChecked ? 'opacity-50 !cursor-default' : ''} bg-pfYellow rounded-md cursor-pointer max-w-40 grid place-items-center text-black`}
           type="submit"
           disabled={!isValid || !gdprAcceptedIsChecked }
         >
