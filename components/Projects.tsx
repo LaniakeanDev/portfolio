@@ -1,4 +1,6 @@
-import Image from "next/image"
+import Image from "next/image";
+import ProjectSlideShow from "./ProjectSlideShow";
+import PROJECTS from '@/constants';
 
 const Projects = () => {
   return (
@@ -12,13 +14,11 @@ const Projects = () => {
       <h2 className="mb-10">Projects</h2>
       <p className="text-lg sm:text-2xl text-center mb-12 lg:mb-24">An overview of a few projects I have worked on</p>
       <div className="flex flex-col-reverse gap-10 lg:flex-row lg:gap-32 items-center">
-        <div className="w-[300px] h-[220px] sm:h-80 sm:w-[435px] relative">      
-          <Image
-            src="/latresse.jpg" 
-            alt="Fractal Background Image"
-            fill
-          />
-        </div>
+        <ProjectSlideShow
+          picSrcs={PROJECTS[0].pictures}
+          alt={PROJECTS[0].title}
+          className="w-[300px] h-[220px] sm:h-80 sm:w-[435px] relative rounded-md"
+        />
         <div className="w-[90vw] max-w-[458px]">
           <h3 className="mb-4 text-left">La Tresse</h3>
           <p>I designed and developed this tiny social network for members of a Third Place focusing on cooperation and social interactions.</p>
