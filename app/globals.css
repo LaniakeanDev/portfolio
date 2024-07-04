@@ -81,6 +81,12 @@ h3 {
   opacity: 1;
 }
 
+.fade {
+  @apply !opacity-0
+}
+.img-transition {
+  transition: opacity 2s ease-in-out;
+}
 
 @keyframes wheel {
   to {
