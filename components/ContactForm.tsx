@@ -33,15 +33,15 @@ function ContactForm() {
       return;
     }
     const gRecaptchaToken = await executeRecaptcha('inquirySubmit');
-    const captchaOk = await fetch('/api/userverify', {
+    const captchaRes = await fetch('/api/userverify', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ gRecaptchaToken })
     }); 
-    console.log(captchaOk);
-    if (!captchaOk) {
+    console.log(captchaRes);
+    if (!captchaRes.ok) {
       return;
     }
     // add here action to be triggered when submitting

@@ -2,12 +2,12 @@
 
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
-export default function GooGleCaptchaWrapper({
+export default function GoogleReCaptchaWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const reCaptchaKey = process.env.RC_KEY;
+  const reCaptchaKey = process.env.NEXT_PUBLIC_RC_KEY;
   return (
     <GoogleReCaptchaProvider 
       reCaptchaKey={reCaptchaKey ?? "UNDEFINED"}
