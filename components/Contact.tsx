@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactForm from "./ContactForm";
+import GooGleCaptchaWrapper from "./GoogleCaptchaWrapper";
 
 export default function Contact() {
   return (
@@ -12,7 +13,9 @@ export default function Contact() {
       />
       <h2 className="mb-10">Contact</h2>
       <p className="text-md sm:text-xl text-center mb-12 lg:mb-24 max-w-[600px]">Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
-      <ContactForm />
+      <GooGleCaptchaWrapper>
+        <ContactForm />
+      </GooGleCaptchaWrapper>
     </section>
   )
 }
