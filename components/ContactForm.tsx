@@ -119,8 +119,8 @@ function ContactForm() {
           />
         </div>
         <p className="w-[90%] text-xs mb-6">
-          I consent to the processing of the information entered. To learn more [about my rights and the purposes of the processing], I consult the privacy policy.
-            [LINK]
+          I consent to the processing of the information entered. {/*To learn more [about my rights and the purposes of the processing], I consult the privacy policy.*/} This site is protected by reCAPTCHA and the Google
+          <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
         </p>
       </div>
       <div className="w-full grid place-items-end">

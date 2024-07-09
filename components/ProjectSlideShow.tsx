@@ -36,6 +36,7 @@ export default function ProjectSlideShow({picSrcs, alt, className}: ProjectSlide
           src={picSrcs[currentPicScrIndex1]}
           alt={alt}
           fill
+          sizes="(max-width: 640px) 300px, 435px"
         />
       </div>
       <div className="absolute top-0 left-0 h-full w-full z-0">
@@ -43,6 +44,7 @@ export default function ProjectSlideShow({picSrcs, alt, className}: ProjectSlide
           src={picSrcs[currentPicScrIndex2]}
           alt={alt}
           fill
+          sizes="(max-width: 640px) 300px, 435px"
         />
       </div>
     </div>
