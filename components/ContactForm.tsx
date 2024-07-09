@@ -2,6 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import contactSchema from '@/app/utils/validate';
 import postEmail from '@/app/api/email/postEmail';
 import CheckBox from "./CheckBox";
@@ -24,9 +25,23 @@ function ContactForm() {
 
   const gdprAcceptedIsChecked = watch('gdprAccepted', false);
 
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
   const submitHandler = async (data: ContactFormValues) => {
-    if (!isValid) {
+    if (!isValid || !executeRecaptcha) {
       // console.error('form not validated');
+      return;
+    }
+    const gRecaptchaToken = await executeRecaptcha('inquirySubmit');
+    const captchaRes = await fetch('/api/userverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ gRecaptchaToken })
+    }); 
+    console.log(captchaRes);
+    if (!captchaRes.ok) {
       return;
     }
     // add here action to be triggered when submitting
