@@ -13,7 +13,7 @@ const Footer = () => {
             <p className="max-w-72 min-[400px]:max-w-80 md:max-w-64 text-sm">A FullStack developper crafting fully personalized web solutions with precision and passion</p>
         </div>
         <nav className="md:flex-1 grid place-items-center">
-          <ul className="gap-8 flex flex-col sm:flex-row">
+          <ul className="gap-8 flex flex-col items-center sm:flex-row">
             { NAV_LINKS.map((link) => (
               <Link
                 href={link.href}

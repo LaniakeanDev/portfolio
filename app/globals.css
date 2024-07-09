@@ -88,6 +88,8 @@ h3 {
   transition: opacity 2s ease-in-out;
 }
 
+.grecaptcha-badge { visibility: hidden; }
+
 @keyframes wheel {
   to {
       opacity: 0;

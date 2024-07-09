@@ -15,13 +15,15 @@ const Navbar = () => {
       <nav className="flex justify-between flex-row py-5 px-14 items-center bg-pfBlue z-10 relative">
         <Link href="/">
           <div className="flex gap-4 items-center">
-          <Image 
-            src="/logo.png"
-            alt="logo"
-            width={48}
-            height={48}
-            className="rounded-full"
-          />
+          <div className="w-12 h-12 relative">
+            <Image 
+              src="/logo.png"
+              alt="logo"
+              fill
+              sizes="48px"
+              className="rounded-full"
+            />
+          </div>
           <p>Remy Zins</p>
           </div>
         </Link>
