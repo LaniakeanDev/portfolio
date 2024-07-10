@@ -4,7 +4,7 @@ import PROJECTS from '@/constants';
 
 const Projects = () => {
   return (
-    <section className="w-full relative flex flex-col justify-center items-center px-4 py-10 sm:p-10">
+    <section className="w-full relative flex flex-col justify-center items-center px-4 py-10 sm:p-10" id="projects">
       <Image
         src="/projects-bg.png" 
         alt="Interface utilisateur pour La Tresse"
