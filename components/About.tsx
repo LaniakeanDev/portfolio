@@ -51,6 +51,7 @@ const About = () => {
         <Button 
           type="button"
           title="CONTACT ME"
+          target="contact"
         />
       </div>
     </section>
