@@ -23,6 +23,7 @@ const Hero = () => {
         <Button 
           type="button"
           title="PROJECTS"
+          target="projects"
         />
       </div>
       <div className="sm:h-full flex items-center z-10 absolute bottom-0 w-full justify-center sm:max-w-fit sm:top-0 left-0">

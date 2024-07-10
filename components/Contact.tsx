@@ -4,7 +4,7 @@ import GoogleReCaptchaWrapper from "./GoogleReCaptchaWrapper";
 
 export default function Contact() {
   return (
-    <section className="w-full relative flex flex-col justify-center items-center px-4 py-10 sm:p-10">
+    <section className="w-full relative flex flex-col justify-center items-center px-4 py-10 sm:p-10" id="contact">
       <Image
         src="/contact.png" 
         alt="Fractal Background Image"
