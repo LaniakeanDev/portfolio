@@ -2,7 +2,7 @@
 
 export default async function postEmail(formData: ContactFormValues): Promise<IEmailResponse> {
   try {
-    const response: Response = await fetch('/api/emails', {
+    const response: Response = await fetch('/api/email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
