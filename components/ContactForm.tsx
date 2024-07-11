@@ -40,7 +40,7 @@ function ContactForm() {
       },
       body: JSON.stringify({ gRecaptchaToken })
     }); 
-    console.log(captchaRes);
+    console.log('captchaRes:', captchaRes);
     if (!captchaRes.ok) {
       return;
     }
