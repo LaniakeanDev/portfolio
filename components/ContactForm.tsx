@@ -40,8 +40,9 @@ function ContactForm() {
       },
       body: JSON.stringify({ gRecaptchaToken })
     }); 
-    console.log('captchaRes:', captchaRes);
-    if (!captchaRes.ok) {
+    const bodyData = await captchaRes.json();
+    console.log('bodyData:', bodyData);
+    if (!bodyData.success) {
       return;
     }
     // add here action to be triggered when submitting

@@ -20,11 +20,11 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     const response = await sendEmail(data);
     // console.log('our mailjet fetcher response', response);
-    const { status } = response;
-    if (status === 200) {
+    const { message } = response;
+    if (message === 'success') {
       return NextResponse.json({ message: 'success' }, { status: 200 });
     }
-    return NextResponse.json({ message: 'an error occurred' }, { status });
+    return NextResponse.json({ message: 'an error occurred' }, { status: 400 });
   } catch (error) {
     return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
   }
