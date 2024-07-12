@@ -22,9 +22,9 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
             Name: 'Laniakean',
           },
         ],
-        Subject: 'Misc',
+        Subject: `Portfolio Contact from ${name}`,
         TextPart: message,
-        HTMLPart: `<h3>My H3 Title</h3><p>Nom: ${name}<br>Email: ${email}</p>`,
+        HTMLPart: `<h3>Sender info</h3><p>Nom: ${name}<br>Email: ${email}</p>`,
       },
     ],
   };
