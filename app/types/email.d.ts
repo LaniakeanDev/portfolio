@@ -1,8 +1,8 @@
 
 
 interface IEmailResponse {
-  status: number;
-  message?: string;
+  status?: number;
+  message: string;
 }
 
 interface IEmailBody {

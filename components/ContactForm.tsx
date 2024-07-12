@@ -14,8 +14,6 @@ function ContactForm() {
     register,
     handleSubmit,
     reset,
-    // resetField,
-    // setValue,
     watch
   } = useForm<ContactFormData>({ 
     mode: 'onBlur', 
@@ -29,7 +27,6 @@ function ContactForm() {
 
   const submitHandler = async (data: ContactFormValues) => {
     if (!isValid || !executeRecaptcha) {
-      // console.error('form not validated');
       return;
     }
     const gRecaptchaToken = await executeRecaptcha('inquirySubmit');
@@ -40,13 +37,13 @@ function ContactForm() {
       },
       body: JSON.stringify({ gRecaptchaToken })
     }); 
-    console.log('captchaRes:', captchaRes);
-    if (!captchaRes.ok) {
+    const bodyData = await captchaRes.json();
+    // console.log('bodyData:', bodyData);
+    if (!bodyData.success) {
       return;
     }
-    // add here action to be triggered when submitting
     const response = await postEmail(data);
-    console.log('postEmail fetcher response', response);
+    // console.log('postEmail fetcher response', response);
     reset();
   };
 

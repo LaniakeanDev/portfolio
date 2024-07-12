@@ -1,26 +1,25 @@
 import { NextResponse } from "next/server";
 
-// export async function POST(request: Request, response: Response) {
-  export async function POST(request: Request) {
-  const secretKey = process.env.RC_SECRET;
+  export async function POST(request: Request): Promise<NextResponse> {
+  const secretKey = process.env.RC_SECRET || '';
   const postData = await request.json();
   const { gRecaptchaToken } = postData;
   
   try {
-    const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    const apiResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        // Authorization: `Basic ${credentials}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify({
-        secret: secretKey,
-        response: gRecaptchaToken
-      }),
+      body: `secret=${encodeURIComponent(secretKey)}&response=${encodeURIComponent(gRecaptchaToken)}`,
     });
-    // const gResponse = await res.json();
-    console.log('reponse de google', res);
-    return res;
+    const apiResponseData = await apiResponse.json();
+    // console.log('gResponse', resData);
+    return NextResponse.json({success: apiResponseData.success});
   }
-  catch {}
+  catch (error) {
+    return NextResponse.json({ success: false, error: 'An Error occured' }, {
+      status: 500,
+    })
+  }
 }
