@@ -28,14 +28,20 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
       },
     ],
   };
-  const response = await fetch('https://api.mailjet.com/v3.1/send', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Basic ${credentials}`,
-    },
-    body: JSON.stringify(mailjetData),
-  });
-  const responseData = await response.json();
-  return { message: responseData.Messages[0].Status };
+
+  try {
+    const response = await fetch('https://api.mailjet.com/v3.1/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${credentials}`,
+      },
+      body: JSON.stringify(mailjetData),
+    });
+    const responseData = await response.json();
+    return { message: responseData.Messages[0].Status };
+  }
+  catch {
+    return { message: 'An error occurred while sending the email' }
+  }
 }
