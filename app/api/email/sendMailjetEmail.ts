@@ -9,7 +9,7 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
 
   const { name, email, message } = data;
   const mailjetData: IMailjetEmailBody = {
-    SandboxMode: true,
+    // SandboxMode: true,
     Messages: [
       {
         From: {
@@ -28,7 +28,6 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
       },
     ],
   };
-
   try {
     const response = await fetch('https://api.mailjet.com/v3.1/send', {
       method: 'POST',
