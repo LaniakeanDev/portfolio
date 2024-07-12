@@ -9,7 +9,7 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
 
   const { name, email, message } = data;
   const mailjetData: IMailjetEmailBody = {
-    SandboxMode: true,
+    // SandboxMode: true,
     Messages: [
       {
         From: {
@@ -22,20 +22,25 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
             Name: 'Laniakean',
           },
         ],
-        Subject: 'Misc',
+        Subject: `Portfolio Contact from ${name}`,
         TextPart: message,
-        HTMLPart: `<h3>My H3 Title</h3><p>Nom: ${name}<br>Email: ${email}</p>`,
+        HTMLPart: `<h3>Sender info</h3><p>Nom: ${name}<br>Email: ${email}</p>`,
       },
     ],
   };
-  const response = await fetch('https://api.mailjet.com/v3.1/send', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Basic ${credentials}`,
-    },
-    body: JSON.stringify(mailjetData),
-  });
-  // console.log('mailjet response body', response);
-  return { status: response.status };
+  try {
+    const response = await fetch('https://api.mailjet.com/v3.1/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${credentials}`,
+      },
+      body: JSON.stringify(mailjetData),
+    });
+    const responseData = await response.json();
+    return { message: responseData.Messages[0].Status };
+  }
+  catch {
+    return { message: 'An error occurred while sending the email' }
+  }
 }
