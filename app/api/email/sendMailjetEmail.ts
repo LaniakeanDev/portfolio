@@ -9,7 +9,7 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
 
   const { name, email, message } = data;
   const mailjetData: IMailjetEmailBody = {
-    // SandboxMode: true,
+    SandboxMode: true,
     Messages: [
       {
         From: {
@@ -38,9 +38,13 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
       body: JSON.stringify(mailjetData),
     });
     const responseData = await response.json();
-    return { message: responseData.Messages[0].Status };
+    return { 
+      message: responseData.Messages[0].Status
+    };
   }
   catch {
-    return { message: 'An error occurred while sending the email' }
+    return { 
+      message: 'An error occurred while sending the email'
+    }
   }
 }
