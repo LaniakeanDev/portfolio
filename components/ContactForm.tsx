@@ -6,6 +6,7 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import contactSchema from '@/app/utils/validate';
 import postEmail from '@/app/api/email/postEmail';
 import CheckBox from "./CheckBox";
+import { useState } from "react";
 
 
 function ContactForm() {
@@ -22,6 +23,8 @@ function ContactForm() {
   });
 
   const gdprAcceptedIsChecked = watch('gdprAccepted', false);
+
+  const [isSent, setIsSent] = useState(false);
 
   const { executeRecaptcha } = useGoogleReCaptcha();
 
@@ -43,11 +46,23 @@ function ContactForm() {
       return;
     }
     const response = await postEmail(data);
-    // console.log('postEmail fetcher response', response);
+    console.log('postEmail fetcher response', response);
+    console.log('response.message', response.message);
+    if (response.message === 'success') setIsSent(true)
     reset();
   };
 
-  return (
+
+  return isSent ? 
+    (
+      <div className="max-w-[600px] min-h-[657px] w-full p-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md grid place-items-center">
+        <p className="text-center">
+          Your email has been sent successfully
+        </p>
+      </div>
+    )
+    :
+    (
     <form 
       onSubmit={handleSubmit(submitHandler)}
       className="max-w-[600px] p-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md"
@@ -129,8 +144,16 @@ function ContactForm() {
         </button>
       </div>
     </form>
-  );
+  )
 
+  // :
+  // (
+  //   <div className="max-w-[600px] min-h-[657px] w-full p-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md grid place-items-center">
+  //     <p className="text-center">
+  //       Your email has been sent successfully
+  //     </p>
+  //   </div>
+  // )
 }
 
 export default ContactForm;
