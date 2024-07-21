@@ -6,9 +6,13 @@ import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
-  title: 'Remy Zins, a FullStack Web Developer who will bring your projects to fruition',
-  description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition. From front-end to back-end, delivering seamless user experiences and robust functionality.',
+  title: 'Remy Zins, FullStack Web Developer, works on your projects',
+  // description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition. From front-end to back-end, delivering seamless user experiences and robust functionality.',
+  description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition',
   generator: 'Next.js',
+  alternates: {
+    canonical: './',
+  },
   applicationName: 'Remy Zins Portfolio Website',
   referrer: 'origin-when-cross-origin',
   keywords: ['Web Developer', 'Fullstack', 'Rest API', 'Next.js', 'React', 'Symfony'],
@@ -21,8 +25,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Remy Zins, a FullStack Web Developer who will bring your projects to fruition',
-    description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition. From front-end to back-end, delivering seamless user experiences and robust functionality.',
+    title: 'Remy Zins, FullStack Web Developer, works on your projects',
+    description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition',
     url: 'https://www.remyzins.net/',
     siteName: 'Remy Zins Portfolio Website',
     images: [
