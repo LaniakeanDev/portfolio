@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
-  title: 'Remy Zins, FullStack Web Developer',
-  description: 'A FullStack developper crafting fully personalized web solutions with precision and passion',
+  title: 'Remy Zins, a FullStack Web Developer who will bring your projects to fruition',
+  description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition. From front-end to back-end, delivering seamless user experiences and robust functionality.',
   generator: 'Next.js',
   applicationName: 'Remy Zins Portfolio Website',
   referrer: 'origin-when-cross-origin',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Remy Zins, FullStack Web Developer',
-    description: 'A FullStack developper crafting fully personalized web solutions with precision and passion',
+    title: 'Remy Zins, a FullStack Web Developer who will bring your projects to fruition',
+    description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition. From front-end to back-end, delivering seamless user experiences and robust functionality.',
     url: 'https://www.remyzins.net/',
     siteName: 'Remy Zins Portfolio Website',
     images: [
