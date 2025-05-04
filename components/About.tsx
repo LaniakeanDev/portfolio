@@ -5,7 +5,7 @@ import Button from "./Button"
 
 const About = () => {
   return (
-    <section className="full relative pt-4 pb-16">
+    <section className="full relative pt-4 pb-16" id="about">
       <Image
         src="/about-bg.png" 
         alt="Fractal Background Image"
@@ -41,7 +41,7 @@ const About = () => {
             <StackIcon id="React" />
             <StackIcon id="Node" />
             <StackIcon id="MySQL" />
-            <StackIcon id="Postgres" />
+            <StackIcon id="PostgreSQL" />
             <StackIcon id="MongoDB" />
             <StackIcon id="Figma" />
           </div>

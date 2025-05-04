@@ -4,6 +4,7 @@ import { NAV_LINKS } from "@/constants"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import MenuItem from "./MenuItem"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,12 +44,13 @@ const Navbar = () => {
           }
           <ul className={`hidden ${isOpen ? '!flex flex-col items-center mt-16 py-6' : ''} h-full gap-6 sm:gap-12 sm:flex sm:flex-row`}>
             { NAV_LINKS.map((link) => (
-              <Link
-                href={link.href}
-                key={link.key}
-              >
-                {link.label}
-              </Link>
+              <li key={link.target}>
+                <MenuItem
+                  label={link.label}
+                  target={link.target}
+                />
+              </li>
+                
             ))}
           </ul>
         </div>
