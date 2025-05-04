@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-sm mt-8 md:mt-0">© Copyright 2024. Made by Remy Zins</p>
+      <p className="text-sm mt-8 md:mt-0">© Copyright 2025. Made by Remy Zins</p>
     </footer>
   )
 }

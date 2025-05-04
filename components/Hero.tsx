@@ -14,11 +14,13 @@ const Hero = () => {
         fill
       />
       <p className="absolute top-0 right-0 text-xs mr-2 text-pfVeryLightBlue">This website was made with Next.js</p>
-      <div className="relative sm:p-14 p-6">
-        <h1 className="text-3xl sm:text-5xl">
-          Hi, I&apos;m Remy Zins
-        </h1>
-        <p className="text-lg sm:text-2xl max-w-[550px]">A FullStack developper crafting fully personalized web solutions with precision and passion</p>
+      <div className="relative sm:p-10 p-2">
+        <div className="hero-h1 w-fit p-4 rounded-xl">
+          <h1 className="text-3xl sm:text-5xl">
+            Hi, I&apos;m Remy Zins
+          </h1>
+          <p className="text-lg sm:text-2xl max-w-[550px]">A FullStack developper crafting fully personalized web solutions with precision and passion</p>
+        </div>
       </div>
       <div className="absolute left-0 top-0 grid place-items-center h-full w-full">        
         <Button 
