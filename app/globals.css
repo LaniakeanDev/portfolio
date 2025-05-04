@@ -94,6 +94,10 @@ p, h1, h2, h3 {
 
 .grecaptcha-badge { visibility: hidden; }
 
+.hero-h1 {
+  background: linear-gradient(to top, rgba(0, 1, 30, 0.8), rgba(0, 1, 30, 0));
+}
+
 @keyframes wheel {
   to {
       opacity: 0;
