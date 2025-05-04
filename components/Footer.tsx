@@ -1,7 +1,7 @@
 
 import { NAV_LINKS } from "@/constants"
 import Image from "next/image"
-import Link from "next/link"
+import MenuItem from "./MenuItem"
 
 
 const Footer = () => {
@@ -15,13 +15,12 @@ const Footer = () => {
         <nav className="md:flex-1 grid place-items-center">
           <ul className="gap-8 flex flex-col items-center sm:flex-row">
             { NAV_LINKS.map((link) => (
-              <Link
-                href={link.href}
-                key={`footer-${link.key}`}
-                className="text-regular"
-              >
-                {link.label}
-              </Link>
+              <li key={link.target}>
+                <MenuItem
+                  label={link.label}
+                  target={link.target}
+                />
+              </li>
             ))}
           </ul>
         </nav>
