@@ -5,6 +5,7 @@ const Hero = () => {
   return (
     <section
       className="w-full relative hero-container"
+      id="hero"
     >
       <Image
         src="/hero.png" 
