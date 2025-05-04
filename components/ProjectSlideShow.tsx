@@ -37,7 +37,7 @@ export default function ProjectSlideShow({picSrcs, alt, className}: ProjectSlide
           alt={alt}
           fill
           sizes="(max-width: 640px) 300px, 435px"
-          className="rounded-lg"
+          className="rounded-lg object-cover"
         />
       </div>
       <div className="absolute top-0 left-0 h-full w-full z-0">

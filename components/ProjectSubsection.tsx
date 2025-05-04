@@ -21,9 +21,9 @@ export default function ProjectSubsection({projectId, title, description, link, 
       <div className="w-[90vw] max-w-[458px]">
         <h3 className="mb-4 text-left">{title}</h3>
         <p>{description}</p>
-        <div className="w-full grid place-items-center mt-4">
+        <div className="w-full mt-6">
           <div className="flex flex-row items-center gap-8">
-            <a href={link} rel="noopener noreferrer" className={link ? 'block' : 'hidden'}>
+            <a href={link} rel="noopener noreferrer" target="_blank" className={link ? 'block' : 'hidden'}>
               <div className="flex flex-row items-center gap-2">
                 <p>Link to project</p>
                 <Image
@@ -34,7 +34,7 @@ export default function ProjectSubsection({projectId, title, description, link, 
                 />
               </div>
             </a>
-            <a href={githubLink} rel="noopener noreferrer" className={githubLink ? 'block' : 'hidden'}>
+            <a href={githubLink} rel="noopener noreferrer" target="_blank" className={githubLink ? 'block' : 'hidden'}>
               <div className="flex flex-row items-center gap-2">
                 <p>see on GitHub</p>
                 <Image
