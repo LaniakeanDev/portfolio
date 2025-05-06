@@ -9,7 +9,35 @@ import CheckBox from "./CheckBox";
 import { useState } from "react";
 
 
-function ContactForm() {
+function ContactForm({lang}:{lang: supportedLanguages}) {
+  const content = {
+    sentMessage: {
+      en: 'Your email has been sent successfully',
+      fr: 'Votre email a été envoyé avec succès'
+    },
+    legalText: {
+      en: ['I consent to the processing of the information entered. This form is protected by reCAPTCHA. The Google','Privacy Policy', 'and','Terms of Service','apply'],
+      fr: [
+        'Je consens au traitement des informations saisies. Ce formulaire est protégé par reCAPTCHA. Les',
+        'Politique de confidentialité',
+        'et',
+        'Conditions d’utilisation',
+        'de Google s’appliquent.'
+      ]
+    },
+    submit: {
+      en: 'Submit',
+      fr: 'Envoyer'
+    },
+    message: {
+      en: 'Your message here',
+      fr: 'Votre message ici'
+    },
+    name: {
+      en: 'Name',
+      fr: 'Nom'
+    }
+  }
   const {
     formState: { isValid, errors },
     register,
@@ -46,8 +74,6 @@ function ContactForm() {
       return;
     }
     const response = await postEmail(data);
-    console.log('postEmail fetcher response', response);
-    console.log('response.message', response.message);
     if (response.message === 'success') setIsSent(true)
     reset();
   };
@@ -70,7 +96,7 @@ function ContactForm() {
       <input 
         type="text" 
         aria-invalid={errors.name ? 'true' : 'false'}
-        placeholder="Name"
+        placeholder={content.name[lang]}
         {...register('name')}
         className="w-full p-2 rounded-sm text-black"
       />
@@ -101,7 +127,7 @@ function ContactForm() {
       </div>
       <textarea
         aria-invalid={errors.message ? 'true' : 'false'}
-        placeholder="Your message here"
+        placeholder={content.message[lang]}
         {...register('message')}
         className="w-full p-2 rounded-sm text-black min-h-64"
       />
@@ -130,8 +156,11 @@ function ContactForm() {
             width={16}
           />
         </div>
-        <p className="w-[90%] text-xs mb-6">
+        <p className="w-[90%] text-xs mb-6 hidden">
           I consent to the processing of the information entered. {/*To learn more [about my rights and the purposes of the processing], I consult the privacy policy.*/} This form is protected by reCAPTCHA. The Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+        </p>
+        <p className="w-[90%] text-xs mb-6">
+          {content.legalText[lang][0]} <a href="https://policies.google.com/privacy">{content.legalText[lang][1]}</a> {content.legalText[lang][2]} <a href="https://policies.google.com/terms">{content.legalText[lang][3]}</a> {content.legalText[lang][4]}.
         </p>
       </div>
       <div className="w-full grid place-items-end">
@@ -140,7 +169,7 @@ function ContactForm() {
           type="submit"
           disabled={!isValid || !gdprAcceptedIsChecked }
         >
-          Submit
+          {content.submit[lang]}
         </button>
       </div>
     </form>

@@ -44,19 +44,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main>
           {children}
-        </main>
-        <Footer />
       </body>
       <GoogleAnalytics gaId="G-KX472VF101" />
     </html>
