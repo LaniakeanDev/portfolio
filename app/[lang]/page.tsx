@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 type Params = Promise<{ lang: string }>
 
 
-export default async function Home(props: {
+export default function Home(props: {
   params: Params
 }) {
   const params = use(props.params)
