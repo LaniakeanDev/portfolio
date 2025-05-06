@@ -3,7 +3,31 @@ import StackIcon from "./StackIcon"
 import Button from "./Button"
 
 
-const About = () => {
+const About = ({lang}:{lang: supportedLanguages}) => {
+  const content = {
+    title: {
+      en: 'About Me',
+      fr: 'À propos de moi'
+    },
+    text: {
+      who: {
+        en: 'Who am I?',
+        fr: 'Qui suis-je ?'
+      },
+      p1: {
+        en: 'I am a FullStack web developer, capable of building both the Front-End and the Back-End of your website or web application. You can check out some of my work in the Projects section.',
+        fr: 'Développeur FullStack, je crée aussi bien l’interface (Front-End) que la logique serveur (Back-End) de vos sites et applications web. Explorez mes réalisations dans la partie Projets.'
+      },
+      p2: {
+        en: 'I am open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience, don&#39;t hesitate to contact me.',
+        fr: 'Ouvert à des missions alignées avec mes compétences, où je pourrais m’investir et évoluer. Contactez-moi pour échanger !'
+      }
+    },
+    stack: {
+      en: 'My Stack',
+      fr: 'Mon Stack technique'
+    }
+  }
   return (
     <section className="full relative pt-4 pb-16" id="about">
       <Image
@@ -13,7 +37,7 @@ const About = () => {
         fill
       />
       <div className="grid place-items-center py-10">
-        <h2>About Me</h2>
+        <h2>{content.title[lang]}</h2>
         <Image 
           src="/about.png"
           alt="Profile Picture"
@@ -24,17 +48,17 @@ const About = () => {
       </div>
       <div className="flex flex-col items-center md:flex-row gap-10 justify-around w-full mb-32">
         <div className="max-w-[500px] flex flex-1 flex-col items-center mx-[8vw] sm:mx-10">
-          <h3 className="mb-8">Who am I?</h3>
+          <h3 className="mb-8">{content.text.who[lang]}</h3>
           <p className="text-lg text-justify">
-            I am a FullStack web developer, capable of building both the Front-End and the Back-End of your website or web application. You can check out some of my work in the Projects section.
+            {content.text.p1[lang]}
           </p>
           <br />
           <p className="text-lg text-justify">
-            I am open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience, don&#39;t hesitate to contact me.
+            {content.text.p2[lang]}
           </p>
         </div>
         <div className="max-w-[500px] flex flex-1 flex-col items-center mx-4">
-          <h3 className="mb-8">My Stack</h3>
+          <h3 className="mb-8">{content.stack[lang]}</h3>
           <div className="max-w-[470px] flex justify-center gap-8 flex-wrap">
             <StackIcon id="Symfony" />
             <StackIcon id="Next" />
@@ -50,7 +74,7 @@ const About = () => {
       <div className="w-full flex justify-center">
         <Button 
           type="button"
-          title="CONTACT ME"
+          title={ lang === 'fr' ? 'CONTACTEZ-MOI' : 'CONTACT ME'}
           target="contact"
         />
       </div>

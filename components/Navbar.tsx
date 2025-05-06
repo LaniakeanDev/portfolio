@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useState } from "react"
 import MenuItem from "./MenuItem"
 
-const Navbar = () => {
+const Navbar = ({lang}:{lang: supportedLanguages}) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -25,7 +25,7 @@ const Navbar = () => {
               className="rounded-full"
             />
           </div>
-          <p>Remy Zins</p>
+          <p>{ lang === 'fr' ? 'Rémy Zins' : 'Remy Zins'}</p>
           </div>
         </Link>
         <div className={isOpen ? 'absolute top-0 right-0 w-40 bg-pfBlue z-20 border-l-2 border-b-2 border-white' : ''}>
@@ -46,7 +46,7 @@ const Navbar = () => {
             { NAV_LINKS.map((link) => (
               <li key={link.target}>
                 <MenuItem
-                  label={link.label}
+                  label={link.label[lang]}
                   target={link.target}
                 />
               </li>
