@@ -1,10 +1,5 @@
 import Image from "next/image";
 
-// type stackIconProps = {
-//   src: string;
-//   alt: string;
-//   title: string;
-// }
 
 const StackIcon = ({id}: {id: string}) => {
   return (
