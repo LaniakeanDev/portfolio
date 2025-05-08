@@ -9,12 +9,12 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
 
   const { name, email, message } = data;
   const mailjetData: IMailjetEmailBody = {
-    SandboxMode: true,
+    // SandboxMode: true,
     Messages: [
       {
         From: {
           Email: senderEmail,
-          Name: name,
+          Name: 'Portfolio Contact Form',
         },
         To: [
           {
@@ -24,7 +24,7 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
         ],
         Subject: `Portfolio Contact from ${name}`,
         TextPart: message,
-        HTMLPart: `<h3>Sender info</h3><p>Nom: ${name}<br>Email: ${email}</p>`,
+        HTMLPart: `<h3>Sender info</h3><p>Nom: ${name}<br>Email: ${email}</p><p>Message:</p><p>${message}</p>`,
       },
     ],
   };
