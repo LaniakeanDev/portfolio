@@ -13,7 +13,7 @@ const Navbar = ({lang}:{lang: supportedLanguages}) => {
   };
   return (
     <header>
-      <nav className="flex justify-between flex-row py-5 px-14 items-center bg-pfBlue z-10 relative">
+      <nav className="flex justify-between flex-row py-5 px-5 2xs:px-8 xs:px-10 sm:px-12 md:px-14 items-center bg-pfBlue z-10 relative">
         <Link href="/">
           <div className="flex gap-4 items-center">
           <div className="w-12 h-12 relative">
