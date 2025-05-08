@@ -14,13 +14,13 @@ const Projects = ({lang}:{lang: supportedLanguages}) => {
     },
   };
   return (
-    <section className="w-full relative flex flex-col justify-center items-center px-4 py-10 sm:p-10 md:pt-16" id="projects">
-      <Image
+    <section className="w-full relative flex flex-col justify-center items-center px-4 py-10 sm:p-10 bg-pfBlue md:pt-16" id="projects">
+      {/* <Image
         src="/projects-bg.png" 
         alt="Interface utilisateur pour La Tresse"
         className="bgImg"
         fill
-      />
+      /> */}
       <h2 className="mb-10">{content.title[lang]}</h2>
       <p className="text-lg sm:text-2xl text-center mb-16 lg:mb-24">{content.tagline[lang]}</p>
       <ul>

@@ -24,20 +24,20 @@ export default function ProjectSubsection({projectId, title, description, link, 
     }
   }
   return (
-    <div className="flex flex-col-reverse gap-10 lg:flex-row lg:gap-32 items-center mb-16">
+    <div className="flex flex-col-reverse gap-4 lg:flex-row lg:gap-32 items-center mb-32">
       <ProjectSlideShow
           picSrcs={PROJECTS[projectId].pictures}
           alt={PROJECTS[projectId].title}
           className="w-[300px] h-[220px] sm:h-80 sm:w-[435px] relative rounded-md"
         />
       <div className="w-[90vw] max-w-[458px]">
-        <h3 className="mb-4 text-left">{title}</h3> 
+        <h3 className="mb-6 text-left">{title}</h3> 
         <p>{description}</p>
         <div className="w-full mt-6">
           <div className="flex flex-row items-center gap-8">
             <a href={link} rel="noopener noreferrer" target="_blank" className={link ? 'block' : 'hidden'}>
               <div className="flex flex-row items-center gap-2">
-                <p>{content.link[lang]}</p>
+                <p className="text-pfLightGrey">{content.link[lang]}</p>
                 <Image
                   src="/icons/external-link.svg"
                   alt="external-link"
@@ -48,7 +48,7 @@ export default function ProjectSubsection({projectId, title, description, link, 
             </a>
             <a href={githubLink} rel="noopener noreferrer" target="_blank" className={githubLink ? 'block' : 'hidden'}>
               <div className="flex flex-row items-center gap-2">
-                <p>{content.github[lang]}</p>
+                <p className="text-pfLightGrey">{content.github[lang]}</p>
                 <Image
                   src="/GitHub-bright.svg" 
                   alt="GitHub"
@@ -59,7 +59,7 @@ export default function ProjectSubsection({projectId, title, description, link, 
             </a>
           </div>
         </div>
-        <p className="mb-2 text-right">{year}</p>
+        <p className="mb-2 text-right text-pfGrey">{year}</p>
       </div>
     </div>
   )
