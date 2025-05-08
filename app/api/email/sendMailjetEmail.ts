@@ -14,7 +14,7 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
       {
         From: {
           Email: senderEmail,
-          Name: name,
+          Name: 'Portfolio Contact Form',
         },
         To: [
           {
