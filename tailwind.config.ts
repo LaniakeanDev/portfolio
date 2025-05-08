@@ -26,6 +26,8 @@ const config: Config = {
         "pfVeryLightBlue": "#898EEB",
         "pfYellow": "#FFDB4D",
         "pfDark": "#00033A",
+        "pfGrey": "#6b6c7d",
+        "pfLightGrey": "#c6c7dd"
       }
     },
   },
