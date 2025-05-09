@@ -31,7 +31,7 @@ export default function ProjectSubsection({projectId, title, description, link, 
           className="w-[300px] h-[220px] sm:h-80 sm:w-[435px] relative rounded-md"
         />
       <div className="w-[90vw] max-w-[458px]">
-        <h3 className="mb-6 text-left">{title}</h3> 
+        <h3 className="mb-6 text-left font-semibold">{title}</h3> 
         <p>{description}</p>
         <div className="w-full mt-6">
           <div className="flex flex-row items-center gap-8">

@@ -12,16 +12,16 @@ const Navbar = ({lang}:{lang: supportedLanguages}) => {
     setIsOpen(!isOpen);
   };
   return (
-    <header>
-      <nav className="flex justify-between flex-row py-5 px-5 2xs:px-8 xs:px-10 sm:px-12 md:px-14 items-center bg-pfBlue z-10 relative">
+    <header className="w-full grid place-items-center bg-pfBlue">
+      <nav className="flex justify-between flex-row py-2 px-5 items-center w-full max-w-screen-lg">
         <Link href="/">
           <div className="flex gap-4 items-center">
-          <div className="w-12 h-12 relative">
+          <div className="w-8 h-8 relative">
             <Image 
-              src="/logo.png"
+              src="/about.png"
               alt="logo"
               fill
-              sizes="48px"
+              sizes="32px"
               className="rounded-full"
             />
           </div>
