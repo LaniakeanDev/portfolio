@@ -27,13 +27,10 @@ h3 {
   @apply sm:text-[32px] text-center text-2xl
 }
 
-.hero-container {
+/* .hero-container {
   height: calc(100vh - 86px);
-}
+} */
 
-.bgImg {
-  @apply object-cover z-[-5]
-}
 
 .mouse {
   width: 25px;

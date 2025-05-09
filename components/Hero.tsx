@@ -3,43 +3,66 @@ import Button from "./Button"
 
 const Hero = ({lang}:{lang: supportedLanguages}) => {
   const content = {
-    greeting: {
-      en: 'Hi, I’m Remy Zins',
-      fr: 'Bienvenue, moi c’est Rémy Zins.'
+    name: {
+      en: 'Remy Zins',
+      fr: 'Rémy Zins'
     },
     tagline: {
-      en: 'A FullStack developper crafting fully personalized web solutions with precision and passion',
-      fr: 'Développeur FullStack concevant des solutions web sur mesure avec précision et passion.'
+      en: ', a FullStack developper who loves building things with precision',
+      fr: ', un développeur FullStack qui aime construire avec précision'
+    },
+    iAm: {
+      en: 'I’m',
+      fr: 'Je suis'
     }
   }
   return (
     <section
-      className="w-full relative hero-container"
+      className="w-full bg-pfBlue"
       id="hero"
     >
-      <Image
-        src="/hero.png" 
-        alt="Fractal Background Image"
-        className="bgImg"
-        fill
-      />
-      <div className="relative sm:p-10 p-2">
-        <div className="hero-h1 w-fit p-4 rounded-xl">
-          <h1 className="text-3xl mb-4 sm:text-5xl">
-            {content.greeting[lang]}
-          </h1>
-          <p className="text-lg sm:text-2xl max-w-[550px]">{content.tagline[lang]}</p>
-        </div>
-      </div>
-      <div className="absolute left-0 top-0 grid place-items-center h-full w-full">        
-        <Button 
-          type="button"
-          title={lang === 'fr' ? 'PROJETS' : 'PROJECTS'}
-          target="projects"
+      <div className="relative w-full h-[25vh] rounded-3xl">
+        <Image
+          src="/hero.png" 
+          alt="Fractal Background Image"
+          className="object-cover"
+          fill
         />
       </div>
-      <div className="sm:h-full flex items-center z-10 absolute bottom-0 w-full justify-center sm:max-w-fit sm:top-0 left-0">
-        <div className="flex flex-row max-w-fit sm:flex-col gap-2 bg-white p-2 rounded">
+      <div className="w-full grid place-items-center">
+        <div className="h-32 w-32 rounded-full translate-y-[-64px]">
+          <Image
+            src="/about.png"
+            alt="Profile Picture"
+            className="object-cover"
+            fill
+          />
+        </div>
+      </div>
+      <div className="w-full grid place-items-center translate-y-[-64px]">
+        <div className="w-fit p-4 rounded-xl flex flex-col items-center">
+          <h1 className="text-3xl mb-4 font-semibold sm:text-5xl">
+            {/* {content.mainTitle[lang]} */}
+            Laniakean
+          </h1>
+          <div>
+            <p className="text-lg sm:text-xl my-4">Hello World 👋</p>
+            <p className="text-lg sm:text-xl max-w-[550px]">
+              {content.iAm[lang]} <span className="font-semibold">{content.name[lang]}</span>{content.tagline[lang]}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="grid place-items-center w-full">        
+        <Button 
+          type="button"
+          title={lang === 'fr' ? 'PROJETS' : 'See My Projects'}
+          target="projects"
+          className="text-lg"
+        />
+      </div>
+      <div className="grid place-items-center w-full py-16">
+        <div className="flex flex-row max-w-fit gap-2 bg-white p-2 rounded">
           <a href="https://www.linkedin.com/in/remyzins/" target="blank">
             <Image
               src="/LinkedIn.svg" 
@@ -58,9 +81,9 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
           </a>
         </div>
       </div>
-      <div className="mouseContainer py-4 hidden sm:grid">
+      {/* <div className="mouseContainer py-4 hidden sm:grid">
         <div className="mouse"></div>
-      </div>
+      </div> */}
     </section>
   )
 }
