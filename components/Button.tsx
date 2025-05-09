@@ -6,9 +6,10 @@ type ButtonProps = {
   icon?: string;
   variant?: string;
   target?: string;
+  className?: string;
 }
 
-const Button = ({ type, title, /*icon,*/ variant, target }: ButtonProps) => {
+const Button = ({ type, title, /*icon,*/ variant, target, className }: ButtonProps) => {
   const handleClick = () => {
     if (target) {
     document.getElementById(target)?.scrollIntoView({
@@ -18,7 +19,7 @@ const Button = ({ type, title, /*icon,*/ variant, target }: ButtonProps) => {
   }
   return (
     <button
-    className={`flexCenter rounded-md ${variant} bg-pfYellow border-2 border-white text-pfDark px-16 py-2 cursor-pointer`}
+    className={`flexCenter rounded-md ${variant} bg-pfYellow border-2 border-white text-pfDark px-16 py-2 cursor-pointer ${className}`}
       type={type}
       onClick={handleClick}
     >

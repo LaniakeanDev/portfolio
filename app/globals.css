@@ -20,20 +20,17 @@ body {
 }
 
 h2 {
-  @apply sm:text-[40px] text-3xl
+  @apply sm:text-[40px] text-3xl font-bold py-4
 }
 
 h3 {
   @apply sm:text-[32px] text-center text-2xl
 }
 
-.hero-container {
+/* .hero-container {
   height: calc(100vh - 86px);
-}
+} */
 
-.bgImg {
-  @apply object-cover z-[-5]
-}
 
 .mouse {
   width: 25px;
@@ -94,9 +91,7 @@ p, h1, h2, h3 {
 
 .grecaptcha-badge { visibility: hidden; }
 
-.hero-h1 {
-  background: linear-gradient(to bottom left, rgba(0, 1, 30, 0.8), rgba(0, 1, 30, 0));
-}
+
 
 @keyframes wheel {
   to {
