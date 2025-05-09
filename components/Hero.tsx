@@ -14,6 +14,10 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
     iAm: {
       en: 'I’m',
       fr: 'Je suis'
+    },
+    findMe: {
+      en: 'Find me on',
+      fr: 'Trouvez-moi sur'
     }
   }
   return (
@@ -21,13 +25,15 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
       className="w-full bg-pfBlue"
       id="hero"
     >
-      <div className="relative w-full h-[25vh] rounded-3xl">
-        <Image
-          src="/hero.png" 
-          alt="Fractal Background Image"
-          className="object-cover"
-          fill
-        />
+      <div className="w-full grid place-items-center">
+        <div className="relative w-full max-w-screen-lg h-[25vh] rounded-3xl">
+          <Image
+            src="/hero.png" 
+            alt="Fractal Background Image"
+            className="object-cover"
+            fill
+          />
+        </div>
       </div>
       <div className="w-full grid place-items-center">
         <div className="h-32 w-32 rounded-full translate-y-[-64px]">
@@ -62,13 +68,15 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
         />
       </div>
       <div className="grid place-items-center w-full py-16">
-        <div className="flex flex-row max-w-fit gap-2 bg-white p-2 rounded">
+        <div className="flex flex-row max-w-fit gap-4 items-center">
+          <p className="text-base sm:text-lg">{content.findMe[lang]}</p>
           <a href="https://www.linkedin.com/in/remyzins/" target="blank">
             <Image
               src="/LinkedIn.svg" 
               alt="LinkedIn"
               width={30}
               height={30}
+              className="bg-white rounded"
             />
           </a>
           <a href="https://github.com/LaniakeanDev" target="blank">
@@ -77,6 +85,7 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
               alt="GitHub"
               width={30}
               height={30}
+              className="bg-white rounded"
             />
           </a>
         </div>
