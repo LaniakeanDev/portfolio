@@ -24,7 +24,7 @@ export default function ProjectSubsection({projectId, title, description, link, 
     }
   }
   return (
-    <div className="flex flex-col-reverse gap-4 lg:flex-row lg:gap-32 items-center mb-32">
+    <div className="flex flex-col-reverse gap-4 lg:flex-row lg:gap-16 items-center mb-32">
       <ProjectSlideShow
           picSrcs={PROJECTS[projectId].pictures}
           alt={PROJECTS[projectId].title}

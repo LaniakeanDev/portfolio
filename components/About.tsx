@@ -29,7 +29,7 @@ const About = ({lang}:{lang: supportedLanguages}) => {
     }
   }
   return (
-    <section className="full relative pt-4 pb-16 bg-pfBlue" id="about">
+    <section className="full relative py-32 pb-16 bg-pfBlue" id="about">
       {/* <Image
         src="/about-bg.png" 
         alt="Fractal Background Image"
@@ -37,16 +37,16 @@ const About = ({lang}:{lang: supportedLanguages}) => {
         fill
       /> */}
       <div className="grid place-items-center py-10">
-        <h2 className="mt-8">{content.title[lang]}</h2>
-        <Image 
+        <h2 className="my-8">{content.title[lang]}</h2>
+        {/* <Image 
           src="/about.png"
           alt="Profile Picture"
           width={120}
           height={120}
           className="py-4 sm:pt-8"
-        />
+        /> */}
       </div>
-      <div className="flex flex-col items-center md:flex-row gap-10 justify-around w-full mb-32">
+      <div className="flex flex-col items-center md:flex-row gap-10 justify-around w-full mb-24">
         <div className="max-w-[500px] flex flex-1 flex-col items-center mx-[8vw] sm:mx-10">
           <h3 className="mb-8">{content.text.who[lang]}</h3>
           <p className="text-lg text-justify">
