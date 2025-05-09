@@ -29,15 +29,15 @@ const About = ({lang}:{lang: supportedLanguages}) => {
     }
   }
   return (
-    <section className="full relative pt-4 pb-16" id="about">
-      <Image
+    <section className="full relative pt-4 pb-16 bg-pfBlue" id="about">
+      {/* <Image
         src="/about-bg.png" 
         alt="Fractal Background Image"
         className="bgImg"
         fill
-      />
+      /> */}
       <div className="grid place-items-center py-10">
-        <h2>{content.title[lang]}</h2>
+        <h2 className="mt-8">{content.title[lang]}</h2>
         <Image 
           src="/about.png"
           alt="Profile Picture"
@@ -74,8 +74,9 @@ const About = ({lang}:{lang: supportedLanguages}) => {
       <div className="w-full flex justify-center">
         <Button 
           type="button"
-          title={ lang === 'fr' ? 'CONTACTEZ-MOI' : 'CONTACT ME'}
+          title={ lang === 'fr' ? 'Contactez-Moi' : 'Contact Me'}
           target="contact"
+          className="text-lg"
         />
       </div>
     </section>
