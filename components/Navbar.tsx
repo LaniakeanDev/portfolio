@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import MenuItem from "./MenuItem"
+import ThemeToggle from "./ThemeToggle"
 
 const Navbar = ({lang}:{lang: supportedLanguages}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = ({lang}:{lang: supportedLanguages}) => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="w-full grid place-items-center bg-pfBlue">
+    <header className="w-full grid place-items-center">
       <nav className="flex justify-between flex-row py-2 px-5 items-center w-full max-w-screen-lg">
         <Link href="/">
           <div className="flex gap-4 items-center">
@@ -28,7 +29,7 @@ const Navbar = ({lang}:{lang: supportedLanguages}) => {
           <p>{ lang === 'fr' ? 'Rémy Zins' : 'Remy Zins'}</p>
           </div>
         </Link>
-        <div className={isOpen ? 'absolute top-0 right-0 w-40 bg-pfBlue z-20 border-l-2 border-b-2 border-white' : ''}>
+        <div className={isOpen ? 'absolute top-0 right-0 w-40 z-20 border-l-2 border-b-2 border-white' : ''}>
           { 
             isOpen ? 
             <Image 
@@ -62,6 +63,7 @@ const Navbar = ({lang}:{lang: supportedLanguages}) => {
           className="inline-block cursor-pointer sm:hidden"
           onClick={toggleMenu}
         />
+        <ThemeToggle />
       </nav>
     </header>
   )
