@@ -29,7 +29,7 @@ const About = ({lang}:{lang: supportedLanguages}) => {
     }
   }
   return (
-    <section className="full relative py-32 pb-16 bg-pfBlue" id="about">
+    <section className="full relative py-32 pb-16" id="about">
       {/* <Image
         src="/about-bg.png" 
         alt="Fractal Background Image"

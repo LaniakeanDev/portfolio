@@ -22,7 +22,7 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
   }
   return (
     <section
-      className="w-full bg-pfBlue"
+      className="w-full"
       id="hero"
     >
       <div className="w-full grid place-items-center">

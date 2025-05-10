@@ -20,7 +20,7 @@ const Footer = ({lang}:{lang: supportedLanguages}) => {
     }
   }
   return (
-    <footer className="bg-pfBlue max-w-[100vw] px-8 md:px-12 lg:px-24 pt-4 md:pt-12 pb-8 flex flex-col items-center">
+    <footer className="max-w-[100vw] px-8 md:px-12 lg:px-24 pt-4 md:pt-12 pb-8 flex flex-col items-center">
       <div className="flex flex-col gap-8 md:gap-4 md:flex-row justify-between w-full">
         <div className="w-full grid place-items-center md:place-items-start md:flex-1">
             <p className="font-bold text-lg mb-4">Remy Zins</p>

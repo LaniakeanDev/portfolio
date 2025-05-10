@@ -14,7 +14,7 @@ type Params = Promise<{ lang: string }>
 export default function Home(props: {
   params: Params
 }) {
-  const params = use(props.params)
+  const params = use(props.params);
   const { lang } = params;
   const lg:supportedLanguages = lang === 'fr' ? 'fr' : 'en';
   return (
