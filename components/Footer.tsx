@@ -21,13 +21,13 @@ const Footer = ({lang}:{lang: supportedLanguages}) => {
   }
   return (
     <footer className="max-w-[100vw] px-8 md:px-12 lg:px-24 pt-4 md:pt-12 pb-8 flex flex-col items-center">
-      <div className="flex flex-col gap-8 md:gap-4 md:flex-row justify-between w-full">
+      <div className="flex flex-col gap-16 md:gap-4 md:flex-row justify-between w-full">
         <div className="w-full grid place-items-center md:place-items-start md:flex-1">
             <p className="font-bold text-lg mb-4">Remy Zins</p>
-            <p className="max-w-72 min-[400px]:max-w-80 md:max-w-64 text-sm">{content.tagline[lang]}</p>
+            <p className="max-w-72 min-[400px]:max-w-80 md:max-w-64 text-sm text-center sm:text-left">{content.tagline[lang]}</p>
         </div>
         <nav className="md:flex-1 grid place-items-center">
-          <ul className="gap-8 flex flex-col items-center sm:flex-row">
+          <ul className="gap-8 flex flex-col items-center sm:flex-row px-2">
             { NAV_LINKS.map((link) => (
               <li key={link.target}>
                 <MenuItem

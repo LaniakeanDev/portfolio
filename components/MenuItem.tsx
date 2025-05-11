@@ -16,7 +16,7 @@ export default function MenuItem({label, target}:MenuItemProps) {
       type="button"
       onClick={() => handleClick(target)}
     >
-      <p>{label}</p>
+      <p className="text-xl sm:text-base">{label}</p>
     </button>
   )
 }

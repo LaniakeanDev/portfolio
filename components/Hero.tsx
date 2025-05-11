@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Button from "./Button"
+import LSection from "./LSection"
 
 const Hero = ({lang}:{lang: supportedLanguages}) => {
   const content = {
@@ -21,10 +22,11 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
     }
   }
   return (
-    <section
+    <LSection id="hero">
+    {/* <section
       className="w-full"
       id="hero"
-    >
+    > */}
       <div className="w-full grid place-items-center">
         <div className="relative w-full max-w-screen-lg h-[25vh] rounded-3xl">
           <Image
@@ -67,7 +69,7 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
           className="text-lg"
         />
       </div>
-      <div className="grid place-items-center w-full py-16">
+      <div className="grid place-items-center w-full pt-16">
         <div className="flex flex-row max-w-fit gap-4 items-center">
           <p className="text-base sm:text-lg">{content.findMe[lang]}</p>
           <a href="https://www.linkedin.com/in/remyzins/" target="blank">
@@ -93,7 +95,8 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
       {/* <div className="mouseContainer py-4 hidden sm:grid">
         <div className="mouse"></div>
       </div> */}
-    </section>
+    {/* </section> */}
+    </LSection>
   )
 }
 

@@ -91,14 +91,15 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
     (
     <form 
       onSubmit={handleSubmit(submitHandler)}
-      className="max-w-[600px] p-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md"
+      className="max-w-[400px] py-8 px-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md"
     >
       <input 
         type="text" 
         aria-invalid={errors.name ? 'true' : 'false'}
         placeholder={content.name[lang]}
         {...register('name')}
-        className="w-full p-2 rounded-sm text-black"
+        className="w-full p-2 rounded-sm text-black bg-gray-200"
+        autoComplete="on"
       />
       <div className="min-h-6 mb-2">
         <p>
@@ -114,7 +115,8 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
         aria-invalid={errors.email ? 'true' : 'false'}
         placeholder="Email"
         {...register('email')}
-        className="w-full p-2 rounded-sm text-black"
+        className="w-full p-2 rounded-sm bg-gray-200"
+        autoComplete="on"
       />
       <div className="min-h-6 mb-2">
         <p>
@@ -129,7 +131,7 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
         aria-invalid={errors.message ? 'true' : 'false'}
         placeholder={content.message[lang]}
         {...register('message')}
-        className="w-full p-2 rounded-sm text-black min-h-64"
+        className="w-full p-2 rounded-sm text-black min-h-64 bg-gray-200"
       />
       <div className="min-h-6 mb-2">
         <p>

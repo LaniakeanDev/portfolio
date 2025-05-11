@@ -30,20 +30,7 @@ const Navbar = ({lang}:{lang: supportedLanguages}) => {
           </div>
         </Link>
         <div className="flex flex-row-reverse sm:flex-row justify-between">
-          <div className={isOpen ? 'absolute top-0 right-0 w-40 z-20 border-l-2 border-b-2 border-white' : ''}>
-            { 
-              isOpen ? 
-              <Image 
-                src="close-btn.svg"
-                alt="close button"
-                width={28}
-                height={28}
-                className="inline-block cursor-pointer sm:hidden absolute top-7 right-[58px]"
-                onClick={toggleMenu}
-              />
-              :
-              null
-            }
+          <div className={isOpen ? 'fixed top-0 left-0 w-full h-[100vh] z-10 border-l-2 border-b-2 border-white card' : ''}>
             <ul className={`hidden ${isOpen ? '!flex flex-col items-center mt-16 py-6' : ''} h-full gap-6 sm:gap-12 sm:flex sm:flex-row`}>
               { NAV_LINKS.map((link) => (
                 <li key={link.target}>
@@ -57,11 +44,11 @@ const Navbar = ({lang}:{lang: supportedLanguages}) => {
             </ul>
           </div>
           <Image 
-            src="burger.svg"
+            src={isOpen ? "close-btn.svg" : "burger.svg"}
             alt="burger menu icon"
             width={32}
             height={32}
-            className="inline-block cursor-pointer sm:hidden"
+            className="inline-block cursor-pointer sm:hidden z-20"
             onClick={toggleMenu}
           />
           <ThemeToggle className="mr-8 sm:mr-0 sm:ml-8 md:ml-16" />

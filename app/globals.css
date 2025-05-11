@@ -5,15 +5,20 @@
 :root {
   --background: white;
   --foreground: #00033A;
+  --card: #d7d9ff;
 }
 
 .dark {
   --background: #00033A;
   background: var(--background);  
   --foreground: white;
+  --card: #262a7c;
 }
 
 
+.card {
+  background-color: var(--card);
+}
 
 
 /* @media (prefers-color-scheme: dark) {
@@ -28,13 +33,13 @@
   background: rgb(var(--background-rgb));
 } */
 
-h2 {
+/* h2 {
   @apply sm:text-[40px] text-3xl font-bold py-4
-}
+} */
 
-h3 {
+/* h3 {
   @apply sm:text-[32px] text-center text-2xl
-}
+} */
 
 /* .hero-container {
   height: calc(100vh - 86px);

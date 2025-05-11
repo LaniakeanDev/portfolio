@@ -24,14 +24,14 @@ export default function ProjectSubsection({projectId, title, description, link, 
     }
   }
   return (
-    <div className="flex flex-col-reverse gap-4 lg:flex-row lg:gap-16 items-center mb-32">
+    <div className="flex flex-col-reverse gap-4 lg:flex-row lg:gap-16 items-center card px-4 2xs:px-8 py-8 rounded-lg">
       <ProjectSlideShow
           picSrcs={PROJECTS[projectId].pictures}
           alt={PROJECTS[projectId].title}
-          className="w-[300px] h-[220px] sm:h-80 sm:w-[435px] relative rounded-md"
+          className="w-[272px] h-[200px] xs:w-[300px] xs:h-[220px] sm:h-80 sm:w-[435px] relative rounded-md"
         />
-      <div className="w-[90vw] max-w-[458px]">
-        <h3 className="mb-6 text-left font-semibold">{title}</h3> 
+      <div className="w-full max-w-[458px]">
+        <h3 className="mb-6 text-left font-semibold text-xl xs:text-2xl">{title}</h3> 
         <p>{description}</p>
         <div className="w-full mt-6">
           <div className="flex flex-row items-center gap-8">
@@ -59,7 +59,7 @@ export default function ProjectSubsection({projectId, title, description, link, 
             </a>
           </div>
         </div>
-        <p className="mb-2 text-right text-pfGrey">{year}</p>
+        <p className="mb-2 text-right text-gray-400">{year}</p>
       </div>
     </div>
   )
