@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes';
 // import MoonIcon from '../public/icons/moon.svg';
 import Image from 'next/image';
 
-export default function ThemeToggle() {
+export default function ThemeToggle({className}:{className?:string}) {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme();
 
@@ -17,7 +17,7 @@ export default function ThemeToggle() {
   if (!mounted) {
     return (
       <button className="btn btn-ghost btn-circle">
-        <div className="w-5 h-5"></div> {/* Placeholder */}
+        <div className="w-[28px] h-[28px]"></div> {/* Placeholder */}
       </button>
     )
   }
@@ -25,7 +25,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="btn btn-ghost btn-circle"
+      className={`btn btn-ghost btn-circle ${className}`}
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (

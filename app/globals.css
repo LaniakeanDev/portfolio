@@ -2,16 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-[data-theme='light'] {
-  --foreground-rgb: 255, 0, 0;
-  --background-rgb: 255, 255, 255;
+:root {
+  --background: white;
+  --foreground: #00033A;
+}
+
+.dark {
+  --background: #00033A;
+  background: var(--background);  
+  --foreground: white;
 }
 
 
-[data-theme='dark'] {
-  --background-rgb: green;
-  --foreground-rgb: white;
-}
+
 
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -20,10 +23,10 @@
   }
 } */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-}
+} */
 
 h2 {
   @apply sm:text-[40px] text-3xl font-bold py-4
@@ -84,9 +87,9 @@ h3 {
   opacity: 1;
 }
 
-p, h1, h2, h3 {
+/* p, h1, h2, h3 {
   @apply  text-white
-}
+} */
 
 .fade {
   @apply !opacity-0

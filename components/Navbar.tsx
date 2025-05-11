@@ -29,41 +29,43 @@ const Navbar = ({lang}:{lang: supportedLanguages}) => {
           <p>{ lang === 'fr' ? 'Rémy Zins' : 'Remy Zins'}</p>
           </div>
         </Link>
-        <div className={isOpen ? 'absolute top-0 right-0 w-40 z-20 border-l-2 border-b-2 border-white' : ''}>
-          { 
-            isOpen ? 
-            <Image 
-              src="close-btn.svg"
-              alt="close button"
-              width={28}
-              height={28}
-              className="inline-block cursor-pointer sm:hidden absolute top-7 right-[58px]"
-              onClick={toggleMenu}
-            />
-            :
-            null
-          }
-          <ul className={`hidden ${isOpen ? '!flex flex-col items-center mt-16 py-6' : ''} h-full gap-6 sm:gap-12 sm:flex sm:flex-row`}>
-            { NAV_LINKS.map((link) => (
-              <li key={link.target}>
-                <MenuItem
-                  label={link.label[lang]}
-                  target={link.target}
-                />
-              </li>
-                
-            ))}
-          </ul>
+        <div className="flex flex-row-reverse sm:flex-row justify-between">
+          <div className={isOpen ? 'absolute top-0 right-0 w-40 z-20 border-l-2 border-b-2 border-white' : ''}>
+            { 
+              isOpen ? 
+              <Image 
+                src="close-btn.svg"
+                alt="close button"
+                width={28}
+                height={28}
+                className="inline-block cursor-pointer sm:hidden absolute top-7 right-[58px]"
+                onClick={toggleMenu}
+              />
+              :
+              null
+            }
+            <ul className={`hidden ${isOpen ? '!flex flex-col items-center mt-16 py-6' : ''} h-full gap-6 sm:gap-12 sm:flex sm:flex-row`}>
+              { NAV_LINKS.map((link) => (
+                <li key={link.target}>
+                  <MenuItem
+                    label={link.label[lang]}
+                    target={link.target}
+                  />
+                </li>
+                  
+              ))}
+            </ul>
+          </div>
+          <Image 
+            src="burger.svg"
+            alt="burger menu icon"
+            width={32}
+            height={32}
+            className="inline-block cursor-pointer sm:hidden"
+            onClick={toggleMenu}
+          />
+          <ThemeToggle className="mr-8 sm:mr-0 sm:ml-8 md:ml-16" />
         </div>
-        <Image 
-          src="burger.svg"
-          alt="burger menu icon"
-          width={32}
-          height={32}
-          className="inline-block cursor-pointer sm:hidden"
-          onClick={toggleMenu}
-        />
-        <ThemeToggle />
       </nav>
     </header>
   )

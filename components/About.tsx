@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import StackIcon from "./StackIcon"
 import Button from "./Button"
 
@@ -29,7 +29,7 @@ const About = ({lang}:{lang: supportedLanguages}) => {
     }
   }
   return (
-    <section className="full relative py-32 pb-16" id="about">
+    <section className="full relative pt-16 sm:pt-24 pb-16" id="about">
       {/* <Image
         src="/about-bg.png" 
         alt="Fractal Background Image"
