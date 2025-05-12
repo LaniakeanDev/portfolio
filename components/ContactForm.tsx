@@ -91,14 +91,15 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
     (
     <form 
       onSubmit={handleSubmit(submitHandler)}
-      className="max-w-[600px] p-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md"
+      className="max-w-[400px] xs:max-w-[600px] py-8 px-6 min-[500px]:p-10 sm:p-16 card rounded-md"
     >
       <input 
         type="text" 
         aria-invalid={errors.name ? 'true' : 'false'}
         placeholder={content.name[lang]}
         {...register('name')}
-        className="w-full p-2 rounded-sm text-black"
+        className="w-full p-2 rounded-sm text-black form-field"
+        autoComplete="on"
       />
       <div className="min-h-6 mb-2">
         <p>
@@ -114,7 +115,8 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
         aria-invalid={errors.email ? 'true' : 'false'}
         placeholder="Email"
         {...register('email')}
-        className="w-full p-2 rounded-sm text-black"
+        className="w-full p-2 rounded-sm form-field"
+        autoComplete="on"
       />
       <div className="min-h-6 mb-2">
         <p>
@@ -129,7 +131,7 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
         aria-invalid={errors.message ? 'true' : 'false'}
         placeholder={content.message[lang]}
         {...register('message')}
-        className="w-full p-2 rounded-sm text-black min-h-64"
+        className="w-full p-2 rounded-sm text-black min-h-64 form-field"
       />
       <div className="min-h-6 mb-2">
         <p>
@@ -156,10 +158,10 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
             width={16}
           />
         </div>
-        <p className="w-[90%] text-xs mb-6 hidden">
+        <p className="w-[90%] text-xs mb-6 hidden text-white">
           I consent to the processing of the information entered. {/*To learn more [about my rights and the purposes of the processing], I consult the privacy policy.*/} This form is protected by reCAPTCHA. The Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
         </p>
-        <p className="w-[90%] text-xs mb-6">
+        <p className="w-[90%] text-xs mb-6 text-white">
           {content.legalText[lang][0]} <a href="https://policies.google.com/privacy">{content.legalText[lang][1]}</a> {content.legalText[lang][2]} <a href="https://policies.google.com/terms">{content.legalText[lang][3]}</a> {content.legalText[lang][4]}.
         </p>
       </div>

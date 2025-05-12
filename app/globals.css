@@ -3,29 +3,71 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --background: white;
+  --foreground: #00033A;
+  --card: #1e216b;
+  --dual-gray: #696969;
+  --footer-bg: #00033A;
 }
 
-@media (prefers-color-scheme: dark) {
+.dark {
+  --background: #00033A;
+  background: var(--background);  
+  --foreground: white;
+  --card: #1e216b;
+  --dual-gray: #c6c7dd;
+  --footer-bg: #000222;
+}
+
+
+.card {
+  background-color: var(--card);
+}
+
+
+.hide-on-dark, .dark .show-on-dark {
+  display: block;
+}
+
+.dark .hide-on-dark, .show-on-dark {
+  display: none;
+}
+
+.dark .form-field {
+  @apply bg-gray-200
+}
+
+.dual-gray-text {
+  color: var(--dual-gray);
+}
+
+.dual-gray-stroke svg {
+  stroke: var(--dual-gray)!important;
+}
+
+.footer {
+  background-color: var(--footer-bg);
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 0;
+    --background-rgb: 255, 0, 0;
   }
-}
+} */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-}
+} */
 
-h2 {
+/* h2 {
   @apply sm:text-[40px] text-3xl font-bold py-4
-}
+} */
 
-h3 {
+/* h3 {
   @apply sm:text-[32px] text-center text-2xl
-}
+} */
 
 /* .hero-container {
   height: calc(100vh - 86px);
@@ -78,9 +120,9 @@ h3 {
   opacity: 1;
 }
 
-p, h1, h2, h3 {
+/* p, h1, h2, h3 {
   @apply  text-white
-}
+} */
 
 .fade {
   @apply !opacity-0
