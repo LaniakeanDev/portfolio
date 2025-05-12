@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes';
 // import SunIcon from '../public/icons/sun.svg';
 // import MoonIcon from '../public/icons/moon.svg';
 import Image from 'next/image';
+import ThemedIcon from './ThemedIcon';
 
 export default function ThemeToggle({className}:{className?:string}) {
   const [mounted, setMounted] = useState(false)
@@ -28,7 +29,7 @@ export default function ThemeToggle({className}:{className?:string}) {
       className={`btn btn-ghost btn-circle ${className}`}
       aria-label="Toggle theme"
     >
-      {theme === 'dark' ? (
+      {/* {theme === 'dark' ? (
         // <SunIcon className="w-5 h-5" />
         <Image 
           src="icons/sun.svg"
@@ -44,7 +45,14 @@ export default function ThemeToggle({className}:{className?:string}) {
           width={28}
           height={28}
         />
-      )}
+      )} */}
+      <ThemedIcon
+        src="icons/moon.svg"
+        darkSrc="icons/sun.svg"
+        alt="theme toggle icon"
+        width={28}
+        height={28}
+      />
     </button>
   )
 }
