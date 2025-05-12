@@ -91,7 +91,7 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
     (
     <form 
       onSubmit={handleSubmit(submitHandler)}
-      className="max-w-[400px] py-8 px-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md"
+      className="max-w-[400px] xs:max-w-[600px] py-8 px-6 min-[500px]:p-10 sm:p-16 card rounded-md"
     >
       <input 
         type="text" 

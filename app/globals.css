@@ -12,12 +12,21 @@
   --background: #00033A;
   background: var(--background);  
   --foreground: white;
-  --card: #262a7c;
+  --card: #1e216b;
 }
 
 
 .card {
   background-color: var(--card);
+}
+
+
+.hide-on-dark, .dark .show-on-dark {
+  display: block;
+}
+
+.dark .hide-on-dark, .show-on-dark {
+  display: none;
 }
 
 

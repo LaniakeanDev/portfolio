@@ -55,13 +55,13 @@ const About = ({lang}:{lang: supportedLanguages}) => {
         <div className="max-w-[500px] flex flex-1 flex-col items-center mx-4">
           <h3 className="mb-8 sm:text-[32px] text-center text-2xl">{content.stack[lang]}</h3>
           <div className="max-w-[470px] flex justify-center gap-8 flex-wrap">
-            <StackIcon id="Symfony" />
             <StackIcon id="Next" />
             <StackIcon id="React" />
-            <StackIcon id="Node" />
-            <StackIcon id="MySQL" />
-            <StackIcon id="PostgreSQL" />
-            <StackIcon id="MongoDB" />
+            <StackIcon id="Symfony" hasDarkVersion />
+            <StackIcon id="Tailwind" ext="svg" />
+            <StackIcon id="Agile/Scrum" src="Agile.svg" />
+            <StackIcon id="Java" ext="svg" />
+            <StackIcon id="Jira" ext="svg" />
             <StackIcon id="Figma" />
           </div>
         </div>

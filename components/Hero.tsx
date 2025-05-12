@@ -32,7 +32,7 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
           <Image
             src="/hero.png" 
             alt="Fractal Background Image"
-            className="object-cover"
+            className="object-cover rounded-2xl"
             fill
           />
         </div>
