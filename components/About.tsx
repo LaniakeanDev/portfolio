@@ -41,7 +41,7 @@ const About = ({lang}:{lang: supportedLanguages}) => {
       {/* <div className="grid place-items-center py-10">
         <h2 className="my-8">{content.title[lang]}</h2>
       </div> */}
-      <div className="flex flex-col items-center md:flex-row gap-24 md:gap-8 justify-center w-full mb-24">
+      <div className="flex flex-col items-center md:flex-row gap-24 md:gap-0 justify-center w-full mb-24">
         <div className="max-w-[500px] flex flex-1 flex-col items-center mx-[8vw] sm:mx-10">
           <h3 className="mb-8 sm:text-[32px] text-center text-2xl">{content.text.who[lang]}</h3>
           <p className="text-lg text-justify">

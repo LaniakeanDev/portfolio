@@ -19,7 +19,7 @@ const Navbar = ({lang}:{lang: supportedLanguages}) => {
           <div className="flex gap-4 items-center">
           <div className="w-8 h-8 relative">
             <Image 
-              src="/about.png"
+              src="/logo-mini.png"
               alt="logo"
               fill
               sizes="32px"

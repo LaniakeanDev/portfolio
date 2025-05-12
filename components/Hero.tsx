@@ -29,7 +29,7 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
       id="hero"
     > */}
       <div className="w-full grid place-items-center">
-        <div className="relative w-full max-w-screen-lg h-[25vh] rounded-3xl">
+        <div className="relative w-[95%] max-w-screen-lg h-[25vh] rounded-3xl">
           <Image
             src="/hero.png" 
             alt="Fractal Background Image"
