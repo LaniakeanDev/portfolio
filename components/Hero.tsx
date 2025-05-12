@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Button from "./Button"
 import LSection from "./LSection"
+import ThemedIcon from "./ThemedIcon"
 
 const Hero = ({lang}:{lang: supportedLanguages}) => {
   const content = {
@@ -73,22 +74,30 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
         <div className="flex flex-row max-w-fit gap-4 items-center">
           <p className="text-base sm:text-lg">{content.findMe[lang]}</p>
           <a href="https://www.linkedin.com/in/remyzins/" target="blank">
-            <Image
-              src="/LinkedIn.svg" 
+            <ThemedIcon
+              src="/LinkedIn-dark.svg"
+              darkSrc="/LinkedIn-bright.svg"
               alt="LinkedIn"
               width={30}
               height={30}
-              className="bg-white rounded"
+              // className="bg-white rounded"
             />
           </a>
           <a href="https://github.com/LaniakeanDev" target="blank">
-            <Image
-              src="/GitHub.svg" 
+            <ThemedIcon
+              src="/GitHub-dark.svg"
+              darkSrc="/GitHub-bright.svg"
+              alt="GitHub"
+              width={30}
+              height={30}
+            />
+            {/* <Image
+              src="/GitHub-dark.svg" 
               alt="GitHub"
               width={30}
               height={30}
               className="bg-white rounded"
-            />
+            /> */}
           </a>
         </div>
       </div>

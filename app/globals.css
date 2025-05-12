@@ -5,7 +5,8 @@
 :root {
   --background: white;
   --foreground: #00033A;
-  --card: #d7d9ff;
+  --card: #1e216b;
+  --dual-gray: #696969;
 }
 
 .dark {
@@ -13,6 +14,7 @@
   background: var(--background);  
   --foreground: white;
   --card: #1e216b;
+  --dual-gray: #c6c7dd;
 }
 
 
@@ -29,6 +31,13 @@
   display: none;
 }
 
+.dual-gray-text {
+  color: var(--dual-gray);
+}
+
+.dual-gray-stroke svg {
+  stroke: var(--dual-gray)!important;
+}
 
 /* @media (prefers-color-scheme: dark) {
   :root {

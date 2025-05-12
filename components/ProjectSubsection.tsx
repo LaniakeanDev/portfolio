@@ -1,6 +1,7 @@
 import PROJECTS from "@/constants";
 import ProjectSlideShow from "./ProjectSlideShow";
 import Image from "next/image";
+import ThemedIcon from "./ThemedIcon";
 
 interface ProjectSubsectionProps {
   projectId: number;
@@ -37,29 +38,46 @@ export default function ProjectSubsection({projectId, title, description, link, 
           <div className="flex flex-row items-center gap-8">
             <a href={link} rel="noopener noreferrer" target="_blank" className={link ? 'block' : 'hidden'}>
               <div className="flex flex-row items-center gap-2">
-                <p className="text-pfLightGrey">{content.link[lang]}</p>
-                <Image
-                  src="/icons/external-link.svg"
+                <p className="dual-gray-text">{content.link[lang]}</p>
+                {/* <Image
+                  src="/icons/external-link-dark.svg"
                   alt="external-link"
                   width={24}
                   height={24}
+                  className="show-on-dark"
+                /> */}
+                <ThemedIcon
+                  src="/icons/external-link.svg"
+                  darkSrc="/icons/external-link-dark.svg"
+                  alt="external-link"
+                  width={24}
+                  height={24}
+                  // className="hide-on-dark"
                 />
               </div>
             </a>
             <a href={githubLink} rel="noopener noreferrer" target="_blank" className={githubLink ? 'block' : 'hidden'}>
               <div className="flex flex-row items-center gap-2">
-                <p className="text-pfLightGrey">{content.github[lang]}</p>
+                <p className="dual-gray-text">{content.github[lang]}</p>
                 <Image
                   src="/GitHub-bright.svg" 
                   alt="GitHub"
                   width={30}
                   height={30}
+                  className="show-on-dark"
+                />
+                <Image
+                  src="/GitHub.svg" 
+                  alt="GitHub"
+                  width={30}
+                  height={30}
+                  className="hide-on-dark"
                 />
               </div>
             </a>
           </div>
         </div>
-        <p className="mb-2 text-right text-gray-400">{year}</p>
+        <p className="mb-2 text-right dual-gray-text">{year}</p>
       </div>
     </div>
   )
