@@ -8,9 +8,10 @@ interface ThemedIconProps {
   className?: string;
   width?: number;
   height?: number;
+  onClick?: () => void;
 }
 
-export default function ThemedIcon({src, darkSrc, alt='illustration', className, width, height}:ThemedIconProps) {
+export default function ThemedIcon({src, darkSrc, alt='illustration', className, width, height, onClick}:ThemedIconProps) {
   return (
     <>
       <Image
@@ -19,6 +20,7 @@ export default function ThemedIcon({src, darkSrc, alt='illustration', className,
         className={`${darkSrc ? 'hide-on-dark' : ''} ${className}`}
         width={width}
         height={height}
+        onClick={onClick}
       />
       {darkSrc && <Image
           src={darkSrc}
@@ -26,6 +28,7 @@ export default function ThemedIcon({src, darkSrc, alt='illustration', className,
           className={`show-on-dark ${className}`}
           width={width}
           height={height}
+          onClick={onClick}
         />
       }
     </>
