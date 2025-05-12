@@ -3,26 +3,28 @@ import Image from "next/image";
 
 interface ThemedIconProps {
   src: string;
+  darkSrc?: string;
   alt?: string;
-  hasDarkVersion?: boolean;
   className?: string;
   width?: number;
   height?: number;
 }
 
-export default function ThemedIcon({src, alt='illustration', hasDarkVersion, className, width, height}:ThemedIconProps) {
+export default function ThemedIcon({src, darkSrc, alt='illustration', className, width, height}:ThemedIconProps) {
   return (
     <>
       <Image
         src={src}
         alt={alt}
-        className={className}
+        className={`${darkSrc ? 'hide-on-dark' : ''} ${className}`}
         width={width}
+        height={height}
       />
-      {hasDarkVersion && <Image
-          src={src}
+      {darkSrc && <Image
+          src={darkSrc}
           alt={alt}
-          className={className}
+          className={`show-on-dark ${className}`}
+          width={width}
           height={height}
         />
       }
