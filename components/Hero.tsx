@@ -35,6 +35,7 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
             alt="Fractal Background Image"
             className="object-cover rounded-2xl"
             fill
+            sizes="(max-width: 1024px) 100vw, 1024px"
           />
         </div>
       </div>

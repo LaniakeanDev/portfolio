@@ -7,6 +7,7 @@
   --foreground: #00033A;
   --card: #1e216b;
   --dual-gray: #696969;
+  --footer-bg: #00033A;
 }
 
 .dark {
@@ -15,6 +16,7 @@
   --foreground: white;
   --card: #1e216b;
   --dual-gray: #c6c7dd;
+  --footer-bg: #000222;
 }
 
 
@@ -31,12 +33,20 @@
   display: none;
 }
 
+.dark .form-field {
+  @apply bg-gray-200
+}
+
 .dual-gray-text {
   color: var(--dual-gray);
 }
 
 .dual-gray-stroke svg {
   stroke: var(--dual-gray)!important;
+}
+
+.footer {
+  background-color: var(--footer-bg);
 }
 
 /* @media (prefers-color-scheme: dark) {
