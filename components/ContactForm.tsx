@@ -115,7 +115,7 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
         aria-invalid={errors.email ? 'true' : 'false'}
         placeholder="Email"
         {...register('email')}
-        className="w-full p-2 rounded-sm form-field"
+        className="w-full p-2 rounded-sm text-black form-field"
         autoComplete="on"
       />
       <div className="min-h-6 mb-2">
