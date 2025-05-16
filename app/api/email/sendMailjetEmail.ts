@@ -38,6 +38,7 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
       body: JSON.stringify(mailjetData),
     });
     const responseData = await response.json();
+    console.log(responseData);
     return { 
       message: responseData.Messages[0].Status
     };
