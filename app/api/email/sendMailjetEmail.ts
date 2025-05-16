@@ -28,7 +28,7 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
       },
     ],
   };
-  console.log("je passe ligne sendMailjetEmail:31")
+  // console.log("je passe ligne sendMailjetEmail:31")
   try {
     const response = await fetch('https://api.mailjet.com/v3.1/send', {
       method: 'POST',
@@ -38,9 +38,9 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
       },
       body: JSON.stringify(mailjetData),
     });
-    console.log("je passe ligne sendMailjetEmail:41")
+    // console.log("je passe ligne sendMailjetEmail:41")
     const responseData = await response.json();
-    console.log(responseData);
+    // console.log({responseData});
     return { 
       message: responseData.Messages[0].Status
     };
