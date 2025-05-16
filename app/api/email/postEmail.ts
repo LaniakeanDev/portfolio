@@ -11,7 +11,7 @@ export default async function postEmail(formData: ContactFormValues): Promise<IE
     });
     // console.log('POST handler response', response);
     const data = await response.json();
-    console.log('returned data', data);
+    // console.log('returned data', data);
     return {
       status: response.status,
       message: data.message,

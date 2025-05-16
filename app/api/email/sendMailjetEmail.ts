@@ -7,8 +7,6 @@ export async function fetcher(data: IEmailBody): Promise<IEmailResponse> {
   const senderEmail: string = process.env.SENDER_EMAIL || '';
   const receiverEmail: string = process.env.RECEIVER_EMAIL || '';
 
-  console.log({senderEmail});
-
   const { name, email, message } = data;
   const mailjetData: IMailjetEmailBody = {
     // SandboxMode: true,
