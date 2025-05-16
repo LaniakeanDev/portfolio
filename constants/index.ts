@@ -1,6 +1,6 @@
 export const NAV_LINKS = [
-  { target: 'home', 
-    label: { en: 'Home', fr: 'Accueil'}},
+  // { target: 'home', 
+  //   label: { en: 'Home', fr: 'Accueil'}},
   { target: 'about', 
     label: { en :'About', fr: 'À propos'}},
   { target: 'projects', 

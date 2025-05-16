@@ -1,67 +1,112 @@
 import Image from "next/image"
 import Button from "./Button"
+import LSection from "./LSection"
+import ThemedIcon from "./ThemedIcon"
 
 const Hero = ({lang}:{lang: supportedLanguages}) => {
   const content = {
-    greeting: {
-      en: 'Hi, I’m Remy Zins',
-      fr: 'Bienvenue, moi c’est Rémy Zins.'
+    name: {
+      en: 'Remy Zins',
+      fr: 'Rémy Zins'
     },
     tagline: {
-      en: 'A FullStack developper crafting fully personalized web solutions with precision and passion',
-      fr: 'Développeur FullStack concevant des solutions web sur mesure avec précision et passion.'
+      en: ', a FullStack developper who loves building things with precision',
+      fr: ', un développeur FullStack qui aime construire avec précision'
+    },
+    iAm: {
+      en: 'I’m',
+      fr: 'Je suis'
+    },
+    findMe: {
+      en: 'Find me on',
+      fr: 'Trouvez-moi sur'
     }
   }
   return (
-    <section
-      className="w-full relative hero-container"
+    <LSection id="hero">
+    {/* <section
+      className="w-full"
       id="hero"
-    >
-      <Image
-        src="/hero.png" 
-        alt="Fractal Background Image"
-        className="bgImg"
-        fill
-      />
-      <div className="relative sm:p-10 p-2">
-        <div className="hero-h1 w-fit p-4 rounded-xl">
-          <h1 className="text-3xl mb-4 sm:text-5xl">
-            {content.greeting[lang]}
-          </h1>
-          <p className="text-lg sm:text-2xl max-w-[550px]">{content.tagline[lang]}</p>
+    > */}
+      <div className="w-full grid place-items-center">
+        <div className="relative w-[95%] max-w-screen-lg h-[25vh] rounded-3xl">
+          <Image
+            src="/hero.png" 
+            alt="Fractal Background Image"
+            className="object-cover rounded-2xl"
+            fill
+            sizes="(max-width: 1024px) 100vw, 1024px"
+          />
         </div>
       </div>
-      <div className="absolute left-0 top-0 grid place-items-center h-full w-full">        
+      <div className="w-full grid place-items-center">
+        <div className="h-32 w-32 rounded-full translate-y-[-64px]">
+          <Image
+            src="/about.png"
+            alt="Profile Picture"
+            className="object-cover"
+            fill
+          />
+        </div>
+      </div>
+      <div className="w-full grid place-items-center translate-y-[-64px]">
+        <div className="w-fit p-4 rounded-xl flex flex-col items-center">
+          <h1 className="text-3xl mb-4 font-semibold sm:text-5xl">
+            {/* {content.mainTitle[lang]} */}
+            Laniakean
+          </h1>
+          <div>
+            <p className="text-lg sm:text-xl my-4">Hello World 👋</p>
+            <p className="text-lg sm:text-xl max-w-[550px]">
+              {content.iAm[lang]} <span className="font-semibold">{content.name[lang]}</span>{content.tagline[lang]}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="grid place-items-center w-full">        
         <Button 
           type="button"
-          title={lang === 'fr' ? 'PROJETS' : 'PROJECTS'}
+          title={lang === 'fr' ? 'PROJETS' : 'See My Projects'}
           target="projects"
+          className="text-lg"
         />
       </div>
-      <div className="sm:h-full flex items-center z-10 absolute bottom-0 w-full justify-center sm:max-w-fit sm:top-0 left-0">
-        <div className="flex flex-row max-w-fit sm:flex-col gap-2 bg-white p-2 rounded">
+      <div className="grid place-items-center w-full pt-16">
+        <div className="flex flex-row max-w-fit gap-4 items-center">
+          <p className="text-base sm:text-lg">{content.findMe[lang]}</p>
           <a href="https://www.linkedin.com/in/remyzins/" target="blank">
-            <Image
-              src="/LinkedIn.svg" 
+            <ThemedIcon
+              src="/LinkedIn-dark.svg"
+              darkSrc="/LinkedIn-bright.svg"
               alt="LinkedIn"
               width={30}
               height={30}
+              // className="bg-white rounded"
             />
           </a>
           <a href="https://github.com/LaniakeanDev" target="blank">
-            <Image
-              src="/GitHub.svg" 
+            <ThemedIcon
+              src="/GitHub-dark.svg"
+              darkSrc="/GitHub-bright.svg"
               alt="GitHub"
               width={30}
               height={30}
             />
+            {/* <Image
+              src="/GitHub-dark.svg" 
+              alt="GitHub"
+              width={30}
+              height={30}
+              className="bg-white rounded"
+            /> */}
           </a>
         </div>
       </div>
-      <div className="mouseContainer py-4 hidden sm:grid">
+      {/* <div className="mouseContainer py-4 hidden sm:grid">
         <div className="mouse"></div>
-      </div>
-    </section>
+      </div> */}
+    {/* </section> */}
+    </LSection>
   )
 }
 

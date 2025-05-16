@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from '@next/third-parties/google'
+// import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { ThemeProvider } from 'next-themes';
 
 
 export const metadata: Metadata = {
@@ -46,11 +45,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
+        </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId="G-KX472VF101" />
+      {/* <GoogleAnalytics gaId="G-KX472VF101" /> */}
     </html>
   );
 }
