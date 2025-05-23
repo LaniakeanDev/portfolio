@@ -46,7 +46,7 @@ export const NAV_LINKS = [
     title: 'Espace Choristes (EVA)',
     description: {
       en: 'This was a quick project which I realized in 3 days using PHP. It allows members of the Ensemble Vocal d’Avignon to access internal information.',
-      fr: 'Un projet rapide, réalisé en 3 jours avec PHP. Il permet aux membres de d’accéder à leur contenu réservé aux membres.'
+      fr: 'Un projet rapide, réalisé en 3 jours avec PHP. Il permet aux membres de d’accéder à leurs ressources de travail.'
     },
     pictures: [ 
       '/projects/faure-1.png',
@@ -78,7 +78,7 @@ export const NAV_LINKS = [
     title: 'Buddha Vacana',
     description: {
       en: 'This is a essentially a translation project I have worked on for a long time. The current version was made before I took my first training as a web developer.',
-      fr: 'Il s’agit essentiellement d’un projet de traduction sur lequel je travaille depuis longtemps. La version courante a été réalisée avant que je fasse ma première formation de développement web.'
+      fr: 'Il s’agit essentiellement d’un projet de traduction sur lequel je travaille depuis longtemps. La version courante a été réalisée avant que je fasse ma première formation en développement web.'
     },
     pictures: [ 
       '/projects/bv-1.png',

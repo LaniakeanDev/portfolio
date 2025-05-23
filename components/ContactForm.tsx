@@ -22,7 +22,7 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
         'Politique de confidentialité',
         'et',
         'Conditions d’utilisation',
-        'de Google s’appliquent.'
+        'de Google s’appliquent'
       ]
     },
     submit: {
