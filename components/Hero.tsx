@@ -10,8 +10,8 @@ const Hero = ({lang}:{lang: supportedLanguages}) => {
       fr: 'Rémy Zins'
     },
     tagline: {
-      en: ', a FullStack developper who loves building things with precision',
-      fr: ', un développeur FullStack qui aime construire avec précision'
+      en: ', a FullStack developer specializing in modern web applications',
+      fr: ', un développeur FullStack spécialisé dans les applications web modernes'
     },
     iAm: {
       en: 'I’m',

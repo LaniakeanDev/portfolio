@@ -15,7 +15,7 @@ export const NAV_LINKS = [
   {
     title: 'Ensemble Vocal d’Avignon',
     description: {
-      en: 'As part of Inkkube, I worked as a FullStack developper on modernizing Ensemble Vocal d’Avignon’s website using Next.js.',
+      en: 'As part of Inkkube, I worked as a FullStack developer on modernizing Ensemble Vocal d’Avignon’s website using Next.js.',
       fr: 'Avec Inkkube, j’ai travaillé en tant que développeur FullStack à la modernisation du site internet de l’Ensemble Vocal d’Avignon en utilisant Next.js'
     },
     pictures: [ 

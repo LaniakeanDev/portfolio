@@ -7,7 +7,7 @@ import MenuItem from "./MenuItem"
 const Footer = ({lang}:{lang: supportedLanguages}) => {
   const content = {
     tagline: {
-      en: 'A FullStack developper crafting fully personalized web solutions with precision and passion',
+      en: 'A FullStack developer crafting fully personalized web solutions with precision and passion',
       fr: 'Développeur FullStack concevant des solutions web sur mesure avec précision et passion.'
     },
     social: {
