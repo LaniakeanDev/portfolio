@@ -2,6 +2,10 @@
 
 type supportedLanguages = 'fr' | 'en';
 
+interface ILang {
+  lang: supportedLanguages;
+}
+
 
 interface IProject {
   title: string;
