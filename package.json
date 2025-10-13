@@ -12,8 +12,7 @@
     "format:check": "prettier --check .",
     "type-check": "tsc --noEmit",
     "validate": "npm run type-check && npm run lint && npm run format:check",
-    "prepare": "husky",    
-    "test": "echo \"No tests yet\" && exit 0"
+    "prepare": "husky"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.1",
@@ -47,7 +46,12 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
-    "*.{json,md,mdx,css,html,yml,yaml,scss}": ["prettier --write"]
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,mdx,css,html,yml,yaml,scss}": [
+      "prettier --write"
+    ]
   }
 }
