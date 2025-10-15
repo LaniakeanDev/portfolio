@@ -7,6 +7,7 @@ import Projects from '@/components/Projects';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Stack from '@/components/stack';
+import Services from '@/components/services';
 
 type Params = Promise<{ lang: string }>;
 
@@ -20,6 +21,7 @@ export default function Home(props: { params: Params }) {
       <Hero lang={lg} />
       <About lang={lg} />
       <Stack lang={lg} />
+      <Services lang={lg} />
       <Projects lang={lg} />
       <Contact lang={lg} />
       <BackToTop />
