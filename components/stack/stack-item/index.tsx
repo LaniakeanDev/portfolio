@@ -13,21 +13,6 @@ import SymfonyIcon from '../icons/Symfony.svg';
 import TailwindIcon from '../icons/Tailwind.svg';
 import TypescriptIcon from '../icons/Typescript.svg';
 
-export type TStackIcon =
-  | 'Agile-Scrum'
-  | 'Git'
-  | 'Java'
-  | 'Jira'
-  | 'Next'
-  | 'Notion-dark'
-  | 'Notion'
-  | 'Figma'
-  | 'PHP'
-  | 'React'
-  | 'Symfony'
-  | 'Tailwind'
-  | 'Typescript';
-
 const iconMap: Record<TStackIcon, SVGComponent> = {
   'Agile-Scrum': AgileScrumIcon,
   Git: GitIcon,

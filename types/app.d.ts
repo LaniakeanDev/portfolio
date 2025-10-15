@@ -4,6 +4,8 @@ interface ILang {
   lang: supportedLanguages;
 }
 
+type LocalizedText = { en: string; fr: string };
+
 interface IProject {
   title: string;
   description: {
