@@ -5,4 +5,4 @@ type ContactFormData = {
   gdprAccepted: boolean;
 };
 
-type ContactFormValues = ContactFormData /* | import('react-hook-form').FieldValues */ ;
+type ContactFormValues = ContactFormData /* | import('react-hook-form').FieldValues */;

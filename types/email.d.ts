@@ -1,5 +1,3 @@
-
-
 interface IEmailResponse {
   status?: number;
   message: string;
