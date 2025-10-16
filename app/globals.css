@@ -10,6 +10,10 @@
   --footer-bg: #00033A;
 }
 
+p {
+  @apply text-lg
+}
+
 .dark {
   --background: #00033A;
   background: var(--background);  
