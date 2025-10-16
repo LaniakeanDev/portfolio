@@ -1,4 +1,5 @@
 import { use } from 'react';
+import About from '@/components/about/index';
 // import About from '@/components/About';
 import BackToTop from '@/components/BackToTop';
 import Contact from '@/components/Contact';
@@ -19,7 +20,7 @@ export default function Home(props: { params: Params }) {
     <>
       <Navbar lang={lg} />
       <Hero lang={lg} />
-      {/* <About lang={lg} /> */}
+      <About lang={lg} />
       <Stack lang={lg} />
       <Services lang={lg} />
       {/* <Projects lang={lg} /> */}
