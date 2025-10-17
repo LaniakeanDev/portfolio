@@ -13,12 +13,14 @@ export const content: IStackContent = {
       },
       {
         id: 'Next',
+        hasDarkVersion: true,
       },
       {
         id: 'Typescript',
       },
       {
-        id: 'Tailwind',
+        // id: 'Tailwind',
+        id: 'Wordpress',
       },
     ],
   },
@@ -31,9 +33,13 @@ export const content: IStackContent = {
       },
       {
         id: 'Symfony',
+        hasDarkVersion: true,
       },
       {
         id: 'Java',
+      },
+      {
+        id: 'Spring',
       },
     ],
   },
@@ -45,7 +51,7 @@ export const content: IStackContent = {
         id: 'Git',
       },
       {
-        id: 'Agile-Scrum',
+        id: 'Agile',
       },
       {
         id: 'Jira',
