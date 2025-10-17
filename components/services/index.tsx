@@ -5,16 +5,17 @@ import { content } from './content';
 export default function Services({ lang }: ILang) {
   return (
     <PageSection title={content.title[lang]}>
-      {content.services.map((card, idx) => (
-        <ServiceCard
-          key={`service-${String(idx)}`}
-          icon={card.icon}
-          title={card.title[lang]}
-          description={card.description[lang]}
-          list={card.list}
-          lang={lang}
-        />
-      ))}
+      <ul className="flex flex-row gap-16 flex-wrap justify-center max-w-5xl">
+        {content.services.map((card, idx) => (
+          <ServiceCard
+            key={`service-${String(idx)}`}
+            icon={card.icon}
+            title={card.title[lang]}
+            description={card.description[lang]}
+            list={card.list[lang]}
+          />
+        ))}
+      </ul>
     </PageSection>
   );
 }
