@@ -1,17 +1,21 @@
 type TStackIcon =
-  | 'Agile-Scrum'
+  | 'Agile'
   | 'Git'
   | 'Java'
   | 'Jira'
   | 'Next'
+  | 'Next-dark'
   | 'Notion-dark'
   | 'Notion'
   | 'Figma'
   | 'PHP'
   | 'React'
+  | 'Spring'
   | 'Symfony'
+  | 'Symfony-dark'
   | 'Tailwind'
-  | 'Typescript';
+  | 'Typescript'
+  | 'Wordpress';
 
 interface IStackItem {
   id: TStackIcon;
