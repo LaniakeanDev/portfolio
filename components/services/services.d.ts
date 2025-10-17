@@ -1,11 +1,16 @@
 interface IServiceCardData {
-  icon: SVGComponent;
+  icon: IconName;
   title: LocalizedText;
   description: LocalizedText;
-  list: LocalizedText[];
+  list: {
+    en: string[];
+    fr: string[];
+  };
 }
 
 interface IServicesContent {
   title: LocalizedText;
   services: IServiceCardData[];
 }
+
+type IconName = 'Fullstack' | 'Atom' | 'Palette' | 'Maintenance' | 'Cart';
