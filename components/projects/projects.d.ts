@@ -5,7 +5,7 @@ interface IProject {
   description: LocalizedText;
   dates: string;
   role: LocalizedText;
-  caseStudy: ILink;
+  caseStudy?: ILink;
   liveLink?: ILink;
   githubLink?: ILink;
 }

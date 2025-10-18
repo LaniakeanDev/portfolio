@@ -5,7 +5,7 @@ interface ILang {
 }
 
 interface Img {
-  src: string;
+  src: string | StaticImageData;
   alt: LocalizedText;
   sizes?: string;
   priority?: boolean;

@@ -7,7 +7,7 @@ export default function IconComponent({ name, className }: IconComponentProps) {
   switch (name) {
     case 'Fullstack':
       return (
-        // <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" className={className}>
+        // <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
         // 	<polygon points="12 2 2 7 12 12 22 7 12 2" />
         // 	<polyline points="2 12 12 17 22 12" />
         // 	<polyline points="2 17 12 22 22 17" />
@@ -21,8 +21,8 @@ export default function IconComponent({ name, className }: IconComponentProps) {
           viewBox="0 0 512 512"
           fill="#000000"
         >
-          <g stroke-width="0"></g>
-          <g stroke-linecap="round" stroke-linejoin="round"></g>
+          <g strokeWidth="0"></g>
+          <g strokeLinecap="round" strokeLinejoin="round"></g>
           <g>
             {' '}
             <circle fill="#366695" cx="256" cy="256" r="256"></circle>{' '}
@@ -73,8 +73,8 @@ export default function IconComponent({ name, className }: IconComponentProps) {
           viewBox="0 0 460 460"
           fill="#000000"
         >
-          <g stroke-width="0"></g>
-          <g stroke-linecap="round" stroke-linejoin="round"></g>
+          <g strokeWidth="0"></g>
+          <g strokeLinecap="round" strokeLinejoin="round"></g>
           <g>
             {' '}
             <g id="XMLID_1053_">
@@ -146,8 +146,8 @@ export default function IconComponent({ name, className }: IconComponentProps) {
           viewBox="0 0 512 512"
           fill="#000000"
         >
-          <g stroke-width="0"></g>
-          <g stroke-linecap="round" stroke-linejoin="round"></g>
+          <g strokeWidth="0"></g>
+          <g strokeLinecap="round" strokeLinejoin="round"></g>
           <g>
             {' '}
             <circle fill="#386895" cx="256" cy="256" r="256"></circle>{' '}
@@ -183,8 +183,8 @@ export default function IconComponent({ name, className }: IconComponentProps) {
           viewBox="0 0 512 512"
           fill="#000000"
         >
-          <g stroke-width="0"></g>
-          <g stroke-linecap="round" stroke-linejoin="round"></g>
+          <g strokeWidth="0"></g>
+          <g strokeLinecap="round" strokeLinejoin="round"></g>
           <g>
             {' '}
             <circle fill="#00447D" cx="256" cy="256" r="256"></circle>{' '}
@@ -223,8 +223,8 @@ export default function IconComponent({ name, className }: IconComponentProps) {
         //   viewBox="0 0 512 512"
         //   fill="#000000"
         // >
-        //   <g stroke-width="0"></g>
-        //   <g stroke-linecap="round" stroke-linejoin="round"></g>
+        //   <g strokeWidth="0"></g>
+        //   <g strokeLinecap="round" strokeLinejoin="round"></g>
         //   <g>
         //     {' '}
         //     <circle fill="#0575A5" cx="256" cy="256" r="256"></circle>{' '}
@@ -292,8 +292,8 @@ export default function IconComponent({ name, className }: IconComponentProps) {
           viewBox="0 0 512 512"
           fill="#000000"
         >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+          <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
             {' '}
             <circle fill="#FFD15D" cx="256" cy="256" r="256"></circle>{' '}

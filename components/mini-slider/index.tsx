@@ -21,10 +21,10 @@ export default function MiniSlider({ slides, className = '', autoPlayInterval = 
   }, [currentSlideIndex, slideCount, autoPlayInterval]);
 
   return (
-    <div className={`w-full grid place-items-center gap-6 relative ${className}`}>
+    <div className={`w-full h-full grid place-items-center gap-6 relative ${className}`}>
       <div className="relative w-full h-full">
         {slides.map((slide, idx) => (
-          <div key={`slide${String(idx)}`} className="absolute top-0 left-0">
+          <div key={`slide${String(idx)}`} className="absolute top-0 left-0 w-full h-full">
             <Image src={slide.src} alt={slide.alt[lang]} fill className="" />
           </div>
         ))}
