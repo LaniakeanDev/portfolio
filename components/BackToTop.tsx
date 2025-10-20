@@ -28,11 +28,13 @@ export default function BackToTop({ className }: BackToTopProps) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
+  // adding a test line
   return (
-    <div className={`h-7 w-7 md:h-9 md:w-9 lg:h-11 lg:w-11 fixed bottom-4 right-4 z-50 sm:opacity-80 hover:opacity-100 ${className}`}>
+    <div
+      className={`h-7 w-7 md:h-9 md:w-9 lg:h-11 lg:w-11 fixed bottom-4 right-4 z-50 sm:opacity-80 hover:opacity-100 ${className}`}
+    >
       <Image
-        src='/back-to-top.svg'
+        src="/back-to-top.svg"
         alt="Back To Top"
         className={`scrollToTopButton ${isVisible ? 'visible' : ''}`}
         onClick={() => scrollToTop()}
