@@ -1,6 +1,6 @@
 import PageSection from '../section';
 import Title from '../title';
-import Button from '../Button';
+import Button from '../Button_old';
 
 export default function Hero({ lang }: ILang) {
   const content = {

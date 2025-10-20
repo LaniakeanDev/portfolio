@@ -5,6 +5,7 @@ import BackToTop from '@/components/BackToTop';
 import Contact from '@/components/Contact';
 import Hero from '@/components/hero';
 // import Projects from '@/components/Projects';
+import Projects from '@/components/projects/index';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Stack from '@/components/stack';
@@ -23,7 +24,7 @@ export default function Home(props: { params: Params }) {
       <About lang={lg} />
       <Stack lang={lg} />
       <Services lang={lg} />
-      {/* <Projects lang={lg} /> */}
+      <Projects lang={lg} />
       <Contact lang={lg} />
       <BackToTop />
       <Footer lang={lg} />
