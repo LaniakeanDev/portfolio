@@ -10,6 +10,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Stack from '@/components/stack';
 import Services from '@/components/services';
+import Process from '@/components/process';
 
 type Params = Promise<{ lang: string }>;
 
@@ -25,6 +26,7 @@ export default function Home(props: { params: Params }) {
       <Stack lang={lg} />
       <Services lang={lg} />
       <Projects lang={lg} />
+      <Process lang={lg} /> {/* to do: add icons */}
       <Contact lang={lg} />
       <BackToTop />
       <Footer lang={lg} />
