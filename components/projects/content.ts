@@ -52,7 +52,8 @@ export const projects: IProject[] = [
     },
     tech: ['React', 'Next.js', 'Tailwind', 'reCaptcha'],
     description: {
-      en: 'I rebuilt the Ensemble Vocal d’Avignon’s website with a modern, user-friendly design featuring a study material management platform, custom audio player, event timeline, performance archive, and secure contact form. The refreshed platform improved audience engagement and helped drive ticket sales, leading to sold-out performances.',
+      // en: 'I rebuilt the Ensemble Vocal d’Avignon’s website with a modern, user-friendly design featuring a study material management platform, custom audio player, event timeline, performance archive, and secure contact form. The refreshed platform improved audience engagement and helped drive ticket sales, leading to sold-out performances.',
+      en: 'I rebuilt the Ensemble Vocal d’Avignon’s website with a modern, user-friendly features. The refreshed platform improved audience engagement and helped drive ticket sales, leading to sold-out performances.',
       fr: 'J’ai reconstruit le site web de l’Ensemble Vocal d’Avignon avec un design moderne et convivial incluant une plateforme d’apprentissage, un lecteur audio personnalisé, une frise chronologique, une archive des performances et un formulaire de contact sécurisé. Cette plateforme rénovée a amélioré l’engagement du public et a contribué à augmenter les ventes de billets, conduisant à des représentations complètes.',
     },
     dates: '2024-2025',
@@ -158,7 +159,8 @@ export const projects: IProject[] = [
     },
     tech: ['HTML', 'CSS', 'JavaScript'],
     description: {
-      en: 'A resource website for Buddhist texts that I have developed and maintained as a personal project since 2009. This long-term project demonstrates my commitment to creating accessible, content-rich platforms and has served over the years thousands of users seeking authentic Buddhist teachings.',
+      // en: 'A resource website for Buddhist texts that I have developed and maintained as a personal project since 2009. This long-term project demonstrates my commitment to creating accessible, content-rich platforms and has served over the years thousands of users seeking authentic Buddhist teachings.',
+      en: 'A resource website for Buddhist texts that I have developed and maintained as a hobby since 2009. Over the years, this long-term project has served thousands of users seeking authentic Buddhist teachings.',
       fr: 'Un site web de ressources consacré aux textes bouddhistes, que je développe et maintiens en tant que projet personnel depuis 2009. Ce projet à long terme témoigne de mon engagement à concevoir des plateformes accessibles et riches en contenu, ayant servi au fil des ans des milliers d’utilisateurs en quête d’enseignements bouddhistes authentiques.',
     },
     dates: '2009-2025',
@@ -171,6 +173,9 @@ export const projects: IProject[] = [
     // },
     liveLink: {
       href: 'https://www.buddha-vacana.org/fr/index.html',
+    },
+    githubLink: {
+      href: '/eva',
     },
   },
 ];
