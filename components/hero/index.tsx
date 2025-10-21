@@ -27,10 +27,10 @@ export default function Hero({ lang }: ILang) {
   };
   return (
     <PageSection id="hero" className="h-[80vh]">
-      <Title level="h1" titleClassName="text-6xl font-semibold mb-8">
+      <Title level="h1" titleClassName="text-5xl font-semibold mb-8 font-[poppins]">
         {content.name[lang]}
       </Title>
-      <p className="text-xl mb-8">{content.tagline[lang]}</p>
+      <p className="text-3xl mb-8">{content.tagline[lang]}</p>
       <p>socials</p>
       <div className="flex gap-8">
         <Button type="button" title={content.projectBtn[lang]} target="projects" className="text-lg" />
