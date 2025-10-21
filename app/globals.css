@@ -1,6 +1,8 @@
-@tailwind base;
+@import "tailwindcss";
+
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
   --background: white;
@@ -11,7 +13,7 @@
 }
 
 p {
-  @apply text-lg font-[poppins]
+  @apply font-[poppins]
 }
 
 .dark {
@@ -41,79 +43,8 @@ p {
   @apply bg-gray-200
 }
 
-.dual-gray-text {
-  color: var(--dual-gray);
-}
-
-.dual-gray-stroke svg {
-  stroke: var(--dual-gray)!important;
-}
-
-.footer {
-  background-color: var(--footer-bg);
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 0;
-    --background-rgb: 255, 0, 0;
-  }
-} */
-
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-} */
-
-/* h2 {
-  @apply sm:text-[40px] text-3xl font-bold py-4
-} */
-
-/* h3 {
-  @apply sm:text-[32px] text-center text-2xl
-} */
-
-/* .hero-container {
-  height: calc(100vh - 86px);
-} */
 
 
-.mouse {
-  width: 25px;
-  height: 40px;
-  border: 2px solid #ccc;
-  border-radius: 60px;
-  position: relative;
-  overflow: hidden;
-}
-
-.mouse::before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 7px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #ccc;
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheel 1.3s infinite;
-  -webkit-animation: wheel 1.3s infinite;
-}
-
-.mouseContainer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  /* display: grid; */
-  place-items: center;
-}
-
-.stackItem {
-  @apply w-[72px]
-}
 
 .scrollToTopButton {
   cursor: pointer;
@@ -124,38 +55,10 @@ p {
   opacity: 1;
 }
 
-/* p, h1, h2, h3 {
-  @apply  text-white
-} */
 
-.fade {
-  @apply !opacity-0
-}
-.img-transition {
-  transition: opacity 2s ease-in-out;
-}
 
 .grecaptcha-badge { visibility: hidden; }
 
 
 
-@keyframes wheel {
-  to {
-      opacity: 0;
-      top: 27px
-  }
-}
 
-@-webkit-keyframes wheel {
-  to {
-      opacity: 0;
-      top: 27px
-  }
-}
-
-/* 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
