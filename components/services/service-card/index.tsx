@@ -1,5 +1,5 @@
 import Title from '@/components/title';
-import IconComponent from '../icons/IconComponent';
+import IconComponent from '../../icon/IconComponent';
 
 interface ServiceCardProps {
   icon: IconName;

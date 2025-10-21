@@ -19,7 +19,7 @@ const Button = ({ type, title, /*icon,*/ variant, target, className }: ButtonPro
   };
   return (
     <button
-      className={`flexCenter rounded-md ${variant} bg-pfYellow border-2 border-white text-pfDark px-16 py-2 cursor-pointer ${className}`}
+      className={`flexCenter rounded-md ${variant} border-2 border-white px-16 py-2 cursor-pointer ${className}`}
       type={type}
       onClick={handleClick}
     >

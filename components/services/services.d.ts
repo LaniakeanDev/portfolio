@@ -12,5 +12,3 @@ interface IServicesContent {
   title: LocalizedText;
   services: IServiceCardData[];
 }
-
-type IconName = 'Fullstack' | 'Atom' | 'Palette' | 'Maintenance' | 'Cart';
