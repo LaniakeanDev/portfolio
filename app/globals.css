@@ -5,12 +5,13 @@
 @tailwind utilities; */
 
 :root {
-  --background: white;
-  --foreground: #00033A;
+  --background: #cacdff;
+  --foreground: #00032e;
   --card: #1e216b;
   --dual-gray: #696969;
   --footer-bg: #00033A;
   --gold: #f5be08;
+  --light-blue: #000dc4;
 }
 
 p {
@@ -18,9 +19,9 @@ p {
 }
 
 .dark {
-  --background: #00033A;
+  --background: #00032e;
   background: var(--background);  
-  --foreground: white;
+  --foreground: #cacdff;
   --card: #1e216b;
   --dual-gray: #c6c7dd;
   --footer-bg: #000222;
