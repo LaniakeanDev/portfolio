@@ -28,9 +28,6 @@ p {
 }
 
 
-.card {
-  background-color: var(--card);
-}
 
 
 .hide-on-dark, .dark .show-on-dark {
@@ -45,7 +42,17 @@ p {
   @apply bg-gray-200
 }
 
+.golden-gradient {
+  @apply bg-linear-to-tr from-(--gold)/50 to-(--gold)
+}
 
+.card {
+  @apply bg-black/30 border border-white/10 hover:border-(--light-blue)
+}
+
+.hover-scale {
+  @apply hover:scale-105 transition-all duration-300
+}
 
 
 .scrollToTopButton {

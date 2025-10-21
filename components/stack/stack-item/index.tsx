@@ -44,7 +44,7 @@ interface StackItemProps {
 
 export default function StackItem({ id, hasDarkVersion }: StackItemProps) {
   return (
-    <li className="flex flex-col gap-4 justify-center items-center bg-black/30 p-4 pt-5 w-40 h-40 rounded-xl hover:scale-105 transition-all duration-300 select-none border border-white/10 hover:border-(--light-blue)/60">
+    <li className="flex flex-col gap-4 justify-center items-center p-4 pt-5 w-40 h-40 rounded-xl hover-scale select-none card">
       {hasDarkVersion ? (
         <ThemedIcon icon={iconMap[id]} darkIcon={iconMap[`${id}-dark` as TStackIcon]} alt={id} className="w-16 h-16" />
       ) : (

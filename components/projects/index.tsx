@@ -12,10 +12,7 @@ export default function Projects({ lang }: ILang) {
     <PageSection title={content.title[lang]}>
       <ul className="flex flex-row flex-wrap gap-8">
         {projects.map((project, idx) => (
-          <li
-            key={`prj${String(idx)}`}
-            className="h-[528px] w-[95vw] max-w-sm bg-black/30 rounded-2xl border border-white/10 hover:border-(--light-blue)/60"
-          >
+          <li key={`prj${String(idx)}`} className="h-[528px] w-[95vw] max-w-sm rounded-2xl card">
             <div className="w-full h-48 relative">
               <MiniSlider lang={lang} slides={project.slides} />
             </div>
