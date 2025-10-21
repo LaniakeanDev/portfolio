@@ -14,8 +14,8 @@ const Navbar = ({ lang }: { lang: supportedLanguages }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="w-full grid place-items-center fixed">
-      <nav className="flex justify-between flex-row py-2 px-5 items-center w-full max-w-screen-lg">
+    <header className="w-full grid place-items-center fixed bg-(--background)">
+      <nav className="flex justify-between flex-row py-2 px-5 items-center w-full max-w-5xl">
         <Link href="/">
           <div className="flex gap-4 items-center">
             <div className="w-8 h-8 relative">

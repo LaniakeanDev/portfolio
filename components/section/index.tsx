@@ -10,7 +10,7 @@ interface PageSectionProps {
 export default function PageSection({ children, className = '', id = '', title }: PageSectionProps) {
   return (
     <section
-      className={`flex flex-col justify-center items-center px-2 sm:px-6 py-16 w-full mb-32 ${className}`}
+      className={`flex flex-col justify-center items-center px-2 sm:px-6 py-16 w-full mb-16 ${className}`}
       id={id}
     >
       {title && (
