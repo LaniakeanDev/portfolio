@@ -1,18 +1,18 @@
 export const content = {
   title: {
-    en: 'Development Process',
-    fr: 'Processus de Développement',
+    en: 'Client Testimonials',
+    fr: 'Témoignages Clients',
   },
 };
 
 export const testimonials = [
   {
     text: {
-      en: 'Development Process',
+      en: 'A true professional who delivered exceptional results ahead of schedule. Highly recommended for any complex front-end project.',
       fr: 'Processus de Développement',
     },
     stars: 5,
-    name: '',
-    role: '',
+    name: 'Alex Cortiz',
+    role: 'President, Ensemble Vocal d’Avignon',
   },
 ];
