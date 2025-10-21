@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 // import { GoogleAnalytics } from '@next/third-parties/google'
-import "./globals.css";
+import { poppins } from '@/lib/fonts';
+import './globals.css';
 import { ThemeProvider } from 'next-themes';
-
 
 export const metadata: Metadata = {
   title: 'Remy Zins, FullStack Web Developer, works on your projects',
   // description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition. From front-end to back-end, delivering seamless user experiences and robust functionality.',
-  description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition',
+  description:
+    'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition',
   generator: 'Next.js',
   alternates: {
     canonical: './',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   applicationName: 'Remy Zins Portfolio Website',
   referrer: 'origin-when-cross-origin',
   keywords: ['Web Developer', 'Fullstack', 'Rest API', 'Next.js', 'React', 'Symfony'],
-  authors: [{ name: 'Remy Zins', url: 'https://www.linkedin.com/in/remyzins/' }, ],
+  authors: [{ name: 'Remy Zins', url: 'https://www.linkedin.com/in/remyzins/' }],
   creator: 'Remy Zins',
   publisher: 'Remy Zins',
   formatDetection: {
@@ -25,7 +26,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Remy Zins, FullStack Web Developer, works on your projects',
-    description: 'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition',
+    description:
+      'Remy Zins, A FullStack developer crafting fully personalized web solutions with precision, passion, and innovation, who will bring your projects to fruition',
     url: 'https://www.remyzins.net/',
     siteName: 'Remy Zins Portfolio Website',
     images: [
@@ -43,9 +45,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
