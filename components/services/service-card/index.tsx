@@ -13,7 +13,7 @@ export default function ServiceCard({ icon, title, description, list /* lang */ 
   return (
     <li className="bg-black/30 rounded-2xl p-8 w-[95vw] max-w-sm h-[450px] select-none hover:scale-105 transition-all duration-300 border border-white/10 hover:border-(--light-blue)/60">
       <IconComponent name={icon} className="w-12 h-12 mb-4" />
-      <Title level="h3" titleClassName="text-2xl mt-4 mb-8 font-semibold">
+      <Title level="h3" titleClassName="text-2xl mt-4 mb-8 font-semibold text-(--gold)">
         {title}
       </Title>
       <p className="mb-4">{description}</p>

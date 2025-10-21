@@ -6,17 +6,21 @@ import MiniSlider from '../mini-slider';
 import Button from '../button';
 
 export default function Projects({ lang }: ILang) {
-  const btnStyle = 'py-2 px-4 bg-pfYellow rounded-xl text-black';
+  const btnStyle =
+    'py-2 px-4 bg-linear-to-tr from-(--gold)/40 hover:from-(--gold)/50 to-(--gold)/80 hover:to-(--gold) rounded-xl text-black font-semibold cursor-pointer transition duration-300 border border-white/50';
   return (
     <PageSection title={content.title[lang]}>
       <ul className="flex flex-row flex-wrap gap-8">
         {projects.map((project, idx) => (
-          <li key={`prj${String(idx)}`} className="h-[518px] w-[95vw] max-w-sm dark:bg-white/10 rounded-2xl">
+          <li
+            key={`prj${String(idx)}`}
+            className="h-[528px] w-[95vw] max-w-sm bg-black/30 rounded-2xl border border-white/10 hover:border-(--light-blue)/60"
+          >
             <div className="w-full h-48 relative">
               <MiniSlider lang={lang} slides={project.slides} />
             </div>
             <div className="px-6 py-4">
-              <Title level="h3" titleClassName="text-xl font-semibold mb-2">
+              <Title level="h3" titleClassName="text-xl text-(--gold) font-semibold mb-4">
                 {project.title[lang]}
               </Title>
               <p className="text-sm mb-4">{project.description[lang]}</p>
@@ -28,10 +32,10 @@ export default function Projects({ lang }: ILang) {
                 ))}
               </ul>
               <p className="text-sm my-4">
-                <span className="font-semibold">{lang == 'en' ? 'Role: ' : 'Rôle: '}</span>
+                <span className="font-semibold text-(--gold)">{lang == 'en' ? 'Role: ' : 'Rôle: '}</span>
                 <span>{project.role[lang]}</span>
               </p>
-              <ul className="flex flex-row justify-around gap-4 mt-8">
+              <ul className="flex flex-row justify-around gap-4 mt-4">
                 {project.caseStudy && (
                   <li>
                     <Button className={btnStyle} label={lang == 'en' ? 'Case Study' : 'Etude de Cas'} />
