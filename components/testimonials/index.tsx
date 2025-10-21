@@ -8,7 +8,7 @@ interface StarProps {
 function Star({ className }: StarProps) {
   return (
     <svg className={className} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="100,20 122,70 176,76 136,112 148,164 100,138 52,164 64,112 24,76 78,70" fill="#FFD700" />
+      <polygon points="100,20 122,70 176,76 136,112 148,164 100,138 52,164 64,112 24,76 78,70" fill="#f5be08" />
     </svg>
   );
 }
@@ -18,7 +18,10 @@ export default function Testimonials({ lang }: ILang) {
     <PageSection title={content.title[lang]}>
       <ul>
         {testimonials.map((testimonial, idx) => (
-          <li key={`test${String(idx)}`} className="bg-white/10 rounded-xl px-8 pt-6 pb-4 w-[95vw] max-w-sm">
+          <li
+            key={`test${String(idx)}`}
+            className="card hover-scale select-none rounded-xl px-8 pt-6 pb-4 w-[95vw] max-w-sm"
+          >
             <ul className="flex flex-row gap-0.5">
               {Array.from({ length: testimonial.stars }).map((_, idx) => (
                 <li key={`star-${String(idx)}`}>
@@ -28,7 +31,7 @@ export default function Testimonials({ lang }: ILang) {
             </ul>
             <p className="my-4">{testimonial.text[lang]}</p>
             <p className="text-right">{testimonial.name}</p>
-            <p className="text-right">{testimonial.role}</p>
+            <p className="text-right opacity-50">{testimonial.role}</p>
           </li>
         ))}
       </ul>
