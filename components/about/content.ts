@@ -33,4 +33,4 @@ export const content = {
       fr: 'Mon Stack technique',
     },
   },
-};
+}; /* as Record<string, Record<TSupportedLanguages, string>> */

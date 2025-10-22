@@ -106,7 +106,7 @@ export const projects: IProject[] = [
     },
     tech: ['React', 'Next.js', 'Tailwind', 'reCaptcha'],
     description: {
-      en: 'My personal portfolio website, designed and developed from the ground up with modern web technologies to showcase my projects and technical expertise, with a strong focus on performance, accessibility, and user experience.',
+      en: 'My personal portfolio website, designed and developed from the ground up with modern web technologies to showcase my projects and technical expertise, with a strong focus on performance and user experience.',
       fr: 'Mon site web portfolio personnel, conçu et développé avec des technologies web modernes pour présenter mes projets et mon expertise technique, en mettant l’accent sur la performance, l’accessibilité et l’expérience utilisateur.',
     },
     dates: '2024-2025',

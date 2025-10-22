@@ -10,7 +10,7 @@
 //   link?: string;
 //   githubLink?: string;
 //   year: string;
-//   lang: supportedLanguages;
+//   lang: TSupportedLanguages;
 // }
 
 // export default function ProjectSubsection({projectId, title, description, link, githubLink, year, lang}:ProjectSubsectionProps) {
