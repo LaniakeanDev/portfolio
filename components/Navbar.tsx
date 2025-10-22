@@ -8,7 +8,7 @@ import MenuItem from './MenuItem';
 import ThemeToggle from './ThemeToggle';
 import ThemedIcon from './ThemedIcon';
 
-const Navbar = ({ lang }: { lang: supportedLanguages }) => {
+const Navbar = ({ lang }: { lang: TSupportedLanguages }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);

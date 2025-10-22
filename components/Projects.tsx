@@ -3,7 +3,7 @@
 // import PROJECTS from "@/constants";
 // import LSection from "./LSection";
 
-// const Projects = ({lang}:{lang: supportedLanguages}) => {
+// const Projects = ({lang}:{lang: TSupportedLanguages}) => {
 //   const content = {
 //     title: {
 //       en: 'Projects',

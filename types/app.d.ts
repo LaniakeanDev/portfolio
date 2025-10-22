@@ -1,7 +1,7 @@
-type supportedLanguages = 'fr' | 'en';
+type TSupportedLanguages = 'fr' | 'en';
 
 interface ILang {
-  lang: supportedLanguages;
+  lang: TSupportedLanguages;
 }
 
 interface Img {

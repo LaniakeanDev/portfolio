@@ -6,7 +6,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   list: string[];
-  // lang: supportedLanguages;
+  // lang: TSupportedLanguages;
 }
 
 export default function ServiceCard({ icon, title, description, list /* lang */ }: ServiceCardProps) {
