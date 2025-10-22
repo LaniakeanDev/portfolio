@@ -26,7 +26,7 @@ const Navbar = ({ lang }: { lang: supportedLanguages }) => {
         </Link>
         <div className="flex flex-row-reverse sm:flex-row justify-between">
           <div
-            className={`${isOpen ? 'fixed top-0 left-0 w-full h-[100vh] z-10 card opacity-100' : 'opacity-0 sm:opacity-100'}  transition-opacity duration-700 ease-in-out`}
+            className={`${isOpen ? 'fixed top-0 left-0 w-full h-screen z-10 opacity-100' : 'opacity-0 sm:opacity-100'}  transition-opacity duration-700 ease-in-out`}
           >
             <ul
               className={`${isOpen ? 'flex flex-col items-center mt-16 py-6' : 'hidden'} h-full gap-6 sm:gap-12 sm:flex sm:flex-row`}

@@ -14,7 +14,7 @@ function StackSection({ items, title }: StackSectionProps) {
       <Title level="h3" titleClassName="text-2xl mb-8">
         {title}
       </Title>
-      <ul className="flex flex-wrap justify-start ml-16 gap-16 ">
+      <ul className="flex flex-wrap justify-start ml-16 gap-8 ">
         {items.map((item, idx) => (
           <StackItem id={item.id} hasDarkVersion={item.hasDarkVersion} key={`stack-item-${title}-${String(idx)}`} />
         ))}

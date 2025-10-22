@@ -53,7 +53,7 @@ export default function Hero({ lang }: ILang) {
           type="button"
           title={content.contactBtn[lang]}
           target="contact"
-          className="text-lg font-semibold hover:bg-(--gold) hover:text-black"
+          className="text-lg font-semibold hover:bg-(--gold) hover:text-black transition duration-300"
         />
       </div>
       <div className="w-full grid place-items-center">
