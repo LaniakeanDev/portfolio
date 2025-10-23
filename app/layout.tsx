@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 // import { GoogleAnalytics } from '@next/third-parties/google'
-import { poppins } from '@/lib/fonts';
+import { poppins } from '@/lib/fonts/fonts';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 
