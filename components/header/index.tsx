@@ -21,8 +21,10 @@ export default function Header({ lang }: ILang) {
           </div>
         </InternalLink>
         <Navbar menuItems={navData[lang]} className="hidden! lg:flex!" />
-        <BurgerMenu menuItems={navData[lang]} className="z-20 lg:hidden!" />
-        <ThemeToggle className="mr-8 sm:mr-0 sm:ml-8 md:ml-16" />
+        <div className="flex flex-row items-center gap-[10vw]">
+          <ThemeToggle className="mr-8 sm:mr-0 sm:ml-8 md:ml-16" />
+          <BurgerMenu menuItems={navData[lang]} className="z-20 lg:hidden!" />
+        </div>
       </div>
     </header>
   );
