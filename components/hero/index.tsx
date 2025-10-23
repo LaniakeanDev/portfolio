@@ -37,7 +37,7 @@ export default function Hero({ lang }: ILang) {
         <Title level="h1" titleClassName="text-5xl font-semibold font-[poppins]">
           {content.name[lang]} <span className="text-(--gold)">Zins</span>
         </Title>
-        <div className="w-32 h-32 relative rounded-full">
+        <div className="w-32 h-32 relative -z-10 rounded-full">
           <Image src="/self.png" fill alt={content.selfAlt[lang]} className="object-cover rounded-full" />
         </div>
       </div>
