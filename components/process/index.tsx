@@ -5,7 +5,7 @@ import { steps, content, whyList } from './content';
 export default function Process({ lang }: ILang) {
   return (
     <PageSection title={content.title[lang]}>
-      <ul className="flex flex-row flex-wrap gap-8">
+      <ul className="flex flex-row flex-wrap justify-center gap-8">
         {steps.map((step, idx) => (
           <li key={`step${String(idx)}`} className="card w-[95vw] max-w-sm p-8 rounded-2xl hover-scale select-none">
             <div className="w-full grid place-items-center mb-4">
