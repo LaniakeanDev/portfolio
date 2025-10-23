@@ -1,7 +1,7 @@
 export const content = {
   name: {
-    en: 'Remy Zins',
-    fr: 'Rémy Zins',
+    en: 'Remy',
+    fr: 'Rémy',
   },
   designation: {
     en: 'FullStack Web Developer',
