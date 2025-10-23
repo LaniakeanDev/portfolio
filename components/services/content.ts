@@ -8,32 +8,38 @@ export const content: IServicesContent = {
       icon: 'Fullstack',
       title: {
         en: 'Full-Stack Development',
-        fr: 'Développement Full-Stack',
+        fr: 'Développement FullStack',
       },
       description: {
         en: 'Complete web application development from concept to deployment. I handle both frontend and backend to ensure seamless integration.',
-        fr: 'Mon Offre',
+        fr: 'Développement complet d’applications web, du concept au déploiement. Je gère à la fois le code côté client et côté serveur pour assurer une intégration parfaitement homogène.',
       },
       list: {
         en: [
           'React/Next.js frontend',
-          'Symfony/PHP backend',
+          'Symfony/Node/Spring backend',
           'Database design & optimization',
           'API development',
           'Testing & deployment',
         ],
-        fr: ['ddddddd', 'ddddddd', 'ddddddd', 'ddddddd', 'ddddddd'],
+        fr: [
+          'React/Next.js côté client',
+          'Symfony/Node côté serveur',
+          'Conception et optimisation de bases de données',
+          'Dévelopmpement d’APIs',
+          'Tests et déploiement',
+        ],
       },
     },
     {
       icon: 'Atom',
       title: {
         en: 'Website Modernization',
-        fr: 'Mon Offre',
+        fr: 'Modernisation de site Internet',
       },
       description: {
         en: 'Transform your outdated website into a modern, fast, and user-friendly experience that works perfectly on all devices.',
-        fr: 'Mon Offre',
+        fr: 'Transformez votre site web obsolète en une expérience moderne, rapide et conviviale qui fonctionne parfaitement sur tous les appareils.',
       },
       list: {
         en: [
@@ -43,18 +49,24 @@ export const content: IServicesContent = {
           'SEO improvements',
           'Content management setup',
         ],
-        fr: ['ddddddd', 'ddddddd', 'ddddddd', 'ddddddd', 'ddddddd'],
+        fr: [
+          'Migration vers des frameworks modernes',
+          'Optimisation des performances',
+          'Implémentation de design responsive',
+          'Améliorations du SEO',
+          'Mise en place de système de gestion de contenu',
+        ],
       },
     },
     {
       icon: 'Palette',
       title: {
         en: 'Custom Web Solutions',
-        fr: 'Mon Offre',
+        fr: 'Solutions Web Personnalisées',
       },
       description: {
         en: 'Tailored solutions for your unique needs. From internal tools to client-facing platforms.',
-        fr: 'Mon Offre',
+        fr: 'Des solutions sur mesure pour vos besoins uniques. Depuis les outils internes jusqu’aux plateformes client.',
       },
       list: {
         en: [
@@ -64,18 +76,24 @@ export const content: IServicesContent = {
           'Automation tools',
           'Custom CMS solutions',
         ],
-        fr: ['ddddddd', 'ddddddd', 'ddddddd', 'ddddddd', 'ddddddd'],
+        fr: [
+          'Développement de fonctionnalités personnalisées',
+          'Intégrations de tierces parties',
+          'Tableaux de bord',
+          'Outils d’automatisation',
+          'Solutions CMS personnalisées',
+        ],
       },
     },
     {
       icon: 'Maintenance',
       title: {
         en: 'Maintenance & Support',
-        fr: 'Mon Offre',
+        fr: 'Maintenance & Support',
       },
       description: {
         en: 'Keep your website running smoothly with ongoing maintenance, updates, and technical support when you need it.',
-        fr: 'Mon Offre',
+        fr: 'Assurez le bon fonctionnement de votre site web avec une maintenance continue, des mises à jour et un support technique quand vous en avez besoin.',
       },
       list: {
         en: [
@@ -85,18 +103,24 @@ export const content: IServicesContent = {
           'Content updates',
           'Technical consultation',
         ],
-        fr: ['ddddddd', 'ddddddd', 'ddddddd', 'ddddddd', 'ddddddd'],
+        fr: [
+          'Corrections de bugs & dépannage',
+          'Mises à jour de sécurité',
+          'Surveillance des performances',
+          'Mises à jour de contenu',
+          'Consultation technique',
+        ],
       },
     },
     {
       icon: 'Cart',
       title: {
         en: 'E-Commerce',
-        fr: 'Mon Offre',
+        fr: 'E-Commerce',
       },
       description: {
-        en: 'Keep your website running smoothly with ongoing maintenance, updates, and technical support when you need it.',
-        fr: 'Mon Offre',
+        en: 'Medusa backend platform with Next.js storefront.',
+        fr: 'Plateforme Medusa côté serveur avec magasin en ligne en Next.js',
       },
       list: {
         en: [
@@ -106,7 +130,13 @@ export const content: IServicesContent = {
           'Content updates',
           'Technical consultation',
         ],
-        fr: ['ddddddd', 'ddddddd', 'ddddddd', 'ddddddd', 'ddddddd'],
+        fr: [
+          'Corrections de bugs et dépannage',
+          'Mises à jour de sécurité',
+          'Surveillance des performances',
+          'Mises à jour de contenu',
+          'Consultation technique',
+        ],
       },
     },
   ],

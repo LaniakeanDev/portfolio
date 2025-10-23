@@ -3,10 +3,11 @@ import { InternalLink } from '../link';
 import Navbar from './navbar';
 import { navData } from './content';
 import BurgerMenu from './burger';
+import ThemeToggle from '../ThemeToggle';
 
 export default function Header({ lang }: ILang) {
   return (
-    <header id="top" className="w-full grid place-items-center fixed bg-(--background)">
+    <header className="w-full grid place-items-center fixed bg-background">
       <div className="flex justify-between flex-row py-2 px-5 items-center w-full max-w-5xl">
         <InternalLink href="/">
           <div className="flex gap-4 items-center">
@@ -19,8 +20,9 @@ export default function Header({ lang }: ILang) {
             </p>
           </div>
         </InternalLink>
-        <Navbar menuItems={navData[lang]} className="!hidden lg:!flex" />
-        <BurgerMenu menuItems={navData[lang]} className="z-20 lg:!hidden" />
+        <Navbar menuItems={navData[lang]} className="hidden! lg:flex!" />
+        <BurgerMenu menuItems={navData[lang]} className="z-20 lg:hidden!" />
+        <ThemeToggle className="mr-8 sm:mr-0 sm:ml-8 md:ml-16" />
       </div>
     </header>
   );

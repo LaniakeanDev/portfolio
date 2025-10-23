@@ -13,6 +13,18 @@ export const navData: INavData = {
       label: 'About',
       href: '#about',
     },
+    {
+      label: 'Services',
+      href: '#services',
+    },
+    {
+      label: 'Projects',
+      href: '#projects',
+    },
+    {
+      label: 'Contact',
+      href: '#contact',
+    },
   ],
   fr: [
     {
@@ -22,6 +34,18 @@ export const navData: INavData = {
     {
       label: 'A propos',
       href: '#about',
+    },
+    {
+      label: 'Services',
+      href: '#services',
+    },
+    {
+      label: 'Projets',
+      href: '#projects',
+    },
+    {
+      label: 'Contact',
+      href: '#contact',
     },
   ],
 };

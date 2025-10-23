@@ -44,7 +44,7 @@ const Navbar = ({ lang }: { lang: TSupportedLanguages }) => {
             alt="burger menu icon"
             width={32}
             height={32}
-            className="inline-block cursor-pointer sm:!hidden z-20"
+            className="inline-block cursor-pointer sm:hidden! z-20"
             onClick={toggleMenu}
           />
           <ThemeToggle className="mr-8 sm:mr-0 sm:ml-8 md:ml-16" />
