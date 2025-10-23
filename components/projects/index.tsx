@@ -21,10 +21,10 @@ export default function Projects({ lang }: ILang) {
                 {project.title[lang]}
               </Title>
               <p className="text-sm mb-4">{project.description[lang]}</p>
-              <ul className="flex flex-row flex-wrap items-center gap-4 my-2">
+              <ul className="flex flex-row items-center gap-2 my-2">
                 {project.tech.map((tech, idx) => (
                   <li key={`${project.title[lang]}-tech-${String(idx)}`} className="px-2 dark:bg-white/10 rounded-md">
-                    {tech}
+                    <p>{tech}</p>
                   </li>
                 ))}
               </ul>
