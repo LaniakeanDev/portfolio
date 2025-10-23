@@ -20,7 +20,7 @@ export default function Process({ lang }: ILang) {
           </li>
         ))}
       </ul>
-      <div className=" mt-16">
+      <div className="w-[95vw] max-w-3xl mt-16">
         <p className="mb-8">{content.whyIntro[lang]}</p>
         <Title level="h4" titleClassName="text-2xl my-4">
           {content.whyH4[lang]}
