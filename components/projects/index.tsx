@@ -12,11 +12,11 @@ export default function Projects({ lang }: ILang) {
     <PageSection id="projects" title={content.title[lang]}>
       <ul className="flex flex-row flex-wrap justify-center gap-8">
         {projects.map((project, idx) => (
-          <li key={`prj${String(idx)}`} className="h-[528px] w-[95vw] max-w-sm rounded-2xl card">
+          <li key={`prj${String(idx)}`} className="min-h-[528px] w-[95vw] max-w-sm rounded-2xl card">
             <div className="w-full h-48 relative">
               <MiniSlider lang={lang} slides={project.slides} />
             </div>
-            <div className="px-6 py-4">
+            <div className="px-6 pt-6 pb-8">
               <Title level="h3" titleClassName="text-xl text-(--gold) font-semibold mb-4">
                 {project.title[lang]}
               </Title>
@@ -28,7 +28,7 @@ export default function Projects({ lang }: ILang) {
                   </li>
                 ))}
               </ul>
-              <p className="text-sm my-4">
+              <p className="text-sm mt-6 mb-8">
                 <span className="font-semibold text-(--gold)">{lang == 'en' ? 'Role: ' : 'Rôle: '}</span>
                 <span>{project.role[lang]}</span>
               </p>
