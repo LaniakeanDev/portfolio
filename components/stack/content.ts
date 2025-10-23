@@ -5,7 +5,7 @@ export const content: IStackContent = {
   },
   front: {
     en: 'Frontend Development',
-    fr: 'Dévelopment Frontend',
+    fr: 'Dévelopment côté Client',
     list: [
       {
         id: 'React',
@@ -26,7 +26,7 @@ export const content: IStackContent = {
   },
   back: {
     en: 'Backend Development',
-    fr: 'Dévelopment Backend',
+    fr: 'Dévelopment côté Serveur',
     list: [
       {
         id: 'PHP',
