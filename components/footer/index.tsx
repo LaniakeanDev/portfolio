@@ -7,8 +7,8 @@ export default function Footer({ lang }: ILang) {
   return (
     <footer className="w-full flex flex-col items-center gap-8 bg-black/50 pt-24">
       <div className="flex flex-row items-center gap-8 mb-12">
-        <Title level="h3" titleClassName="text-5xl text-(--gold) font-semibold">
-          {content.name[lang]}
+        <Title level="h3" titleClassName="text-5xl font-semibold">
+          <span className="text-(--gold)">{content.name[lang]}</span> Zins
         </Title>
         <div className="h-24 w-24 relative rounded-full">
           <Image src="/self.png" fill sizes="96px" alt="Remy Zins" className="rounded-full" />
