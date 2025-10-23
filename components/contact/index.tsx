@@ -4,7 +4,7 @@ import { ExternalLink } from '../link';
 
 export default function Contact({ lang }: ILang) {
   return (
-    <PageSection title="Contact">
+    <PageSection id="contact" title="Contact">
       <p className="text-xl">{content.message[lang]}</p>
       <ExternalLink
         label="laniakean.dev@gmail.com"

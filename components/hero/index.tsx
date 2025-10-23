@@ -32,7 +32,7 @@ export default function Hero({ lang }: ILang) {
     },
   };
   return (
-    <PageSection id="hero" className="min-h-[80vh] pt-32!">
+    <PageSection id="top" className="min-h-[80vh] pt-32!">
       <div className="flex flex-row gap-8 items-center mb-16">
         <Title level="h1" titleClassName="text-5xl font-semibold font-[poppins]">
           {content.name[lang]} <span className="text-(--gold)">Zins</span>
