@@ -3,7 +3,7 @@
 import Title from '../../title';
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
-import { slideLeftwardsVariants } from '@/lib/motion-variants';
+import { slideUpwardsVariants } from '@/lib/motion-variants';
 
 interface ProcessTitleProps {
   label: string;
@@ -16,7 +16,7 @@ export default function ProcessTitle({ label }: ProcessTitleProps) {
     <motion.div
       initial="initial"
       animate={isInView ? 'animate' : 'initial'}
-      variants={slideLeftwardsVariants}
+      variants={slideUpwardsVariants}
       ref={ref}
       transition={{
         duration: 1.5,
