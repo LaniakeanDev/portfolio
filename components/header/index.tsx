@@ -7,6 +7,7 @@ import ThemeToggle from '../ThemeToggle';
 
 export default function Header({ lang }: ILang) {
   return (
+    // <header className="w-full grid place-items-center fixed bg-background/50 backdrop-blur-md z-10">
     <header className="w-full grid place-items-center fixed bg-background z-10">
       <div className="flex justify-between flex-row py-2 px-5 items-center w-full max-w-5xl">
         <InternalLink href="/">
