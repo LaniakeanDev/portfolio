@@ -4,7 +4,7 @@ import Title from '@/components/title';
 import IconComponent from '../../icon/IconComponent';
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
-import { slideUpwardsVariants } from '@/lib/motion-variants';
+import { slideLeftwardsVariants } from '@/lib/motion-variants';
 
 interface ServiceCardProps {
   icon: IconName;
@@ -25,7 +25,7 @@ export default function ServiceCard({ icon, title, description, list /* lang */ 
       <motion.div
         initial="initial"
         animate={isInView ? 'animate' : 'initial'}
-        variants={slideUpwardsVariants}
+        variants={slideLeftwardsVariants}
         ref={ref}
         transition={{
           duration: 1.5,
