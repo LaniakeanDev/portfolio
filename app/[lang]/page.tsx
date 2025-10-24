@@ -12,7 +12,7 @@ import Footer from '@/components/footer';
 import Stack from '@/components/stack';
 import Services from '@/components/services';
 import Process from '@/components/process';
-import Testimonials from '@/components/testimonials';
+// import Testimonials from '@/components/testimonials';
 
 type Params = Promise<{ lang: string }>;
 
@@ -29,7 +29,7 @@ export default function Home(props: { params: Params }) {
       <Services lang={lg} />
       <Projects lang={lg} />
       <Process lang={lg} /> {/* to do: add icons */}
-      <Testimonials lang={lg} />
+      {/* <Testimonials lang={lg} /> */}
       <Contact lang={lg} />
       <BackToTop />
       <Footer lang={lg} />
