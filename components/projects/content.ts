@@ -50,7 +50,7 @@ export const projects: IProject[] = [
       en: 'Ensemble Vocal d’Avignon',
       fr: 'Ensemble Vocal d’Avignon',
     },
-    tech: ['React', 'Next.js', 'Tailwind', 'reCaptcha'],
+    tech: ['React', 'Next.js', 'Tailwind'],
     description: {
       en: 'I rebuilt the Ensemble Vocal d’Avignon’s website with a modern, user-friendly features. The refreshed platform improved audience engagement and helped drive ticket sales, leading to sold-out performances.',
       fr: 'J’ai reconstruit le site web de l’Ensemble Vocal d’Avignon avec un design moderne et convivial . Cette plateforme rénovée a amélioré l’engagement du public et a contribué à augmenter les ventes de billets.',
@@ -103,7 +103,7 @@ export const projects: IProject[] = [
       en: 'This Portfolio Website',
       fr: 'Ce site portfolio',
     },
-    tech: ['React', 'Next.js', 'Tailwind', 'reCaptcha'],
+    tech: ['React', 'Next.js', 'Tailwind'],
     description: {
       en: 'My personal portfolio website, designed and developed from the ground up with modern web technologies to showcase my projects and technical expertise, with a strong focus on performance and user experience.',
       fr: 'Mon site web portfolio personnel, conçu et développé avec des technologies web modernes pour présenter mes projets et mon expertise technique, en mettant l’accent sur la performance, l’accessibilité et l’expérience utilisateur.',
