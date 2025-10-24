@@ -9,11 +9,11 @@ export default function Hero({ lang }: ILang) {
   return (
     <PageSection id="top" className="min-h-[80vh] pt-24! lg:pt-32!">
       <div className="flex flex-col gap-4 xs:gap-8 items-center mb-16">
-        <div className="w-20 h-20 xs:w-24 xs:h-24 relative -z-10 rounded-full">
+        <div className="w-20 h-20 xs:w-24 xs:h-24 relative z-0 rounded-full">
           <Image src="/self.png" fill alt={content.selfAlt[lang]} className="object-cover rounded-full" />
         </div>
         <Title level="h1" titleClassName="text-4xl xs:text-5xl font-semibold font-[poppins]">
-          {content.name[lang]} <span className="text-(--gold)">Zins</span>
+          {content.name[lang]} <span className="orange-to-gold">Zins</span>
         </Title>
       </div>
       <p className="text-xl xs:text-2xl sm:text-3xl mb-16 text-center w-[90vw] max-w-xl!">{content.tagline[lang]}</p>

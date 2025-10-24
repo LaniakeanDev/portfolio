@@ -15,7 +15,7 @@ export default function Header({ lang }: ILang) {
               <Image src="/logo-mini.png" alt="logo" fill sizes="32px" className="rounded-full" />
             </div>
             <p className="font-semibold">
-              <span className="text-(--gold)">{lang === 'fr' ? 'Rémy ' : 'Remy '}</span>
+              <span className="orange-to-gold">{lang === 'fr' ? 'Rémy ' : 'Remy '}</span>
               Zins
             </p>
           </div>
