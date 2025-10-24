@@ -1,29 +1,55 @@
-@tailwind base;
+@import "tailwindcss";
+
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
-  --background: white;
-  --foreground: #00033A;
-  --card: #1e216b;
-  --dual-gray: #696969;
-  --footer-bg: #00033A;
+  --background: #e5e6ff;
+  --foreground: #00032e;
+  --gold: #f5be08;
+  --dark-gold: #d7a500;
+  --light-blue: #000dc4;
+  --dark-blue: #00032e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --breakpoint-2xs: 23.5rem;
+  --breakpoint-xs: 30rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 160rem;
+  --breakpoint-5xl: 240rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Poppins, sans-serif;
 }
 
 .dark {
-  --background: #00033A;
+  --background: #00032e;
   background: var(--background);  
-  --foreground: white;
-  --card: #1e216b;
-  --dual-gray: #c6c7dd;
-  --footer-bg: #000222;
+  --foreground: #e5e6ff;
 }
 
-
-.card {
-  background-color: var(--card);
+html {
+  scroll-behavior: smooth;
 }
 
+p {
+  @apply font-[poppins]
+}
 
 .hide-on-dark, .dark .show-on-dark {
   display: block;
@@ -37,78 +63,60 @@
   @apply bg-gray-200
 }
 
-.dual-gray-text {
-  color: var(--dual-gray);
+.golden-gradient {
+  @apply bg-linear-to-tr from-(--gold)/70 to-(--gold)
 }
 
-.dual-gray-stroke svg {
-  stroke: var(--dual-gray)!important;
+.title-color {
+  @apply text-(--dark-blue)
 }
 
-.footer {
-  background-color: var(--footer-bg);
+.dark .title-color {
+  @apply text-(--gold)/80
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 0;
-    --background-rgb: 255, 0, 0;
-  }
-} */
-
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-} */
-
-/* h2 {
-  @apply sm:text-[40px] text-3xl font-bold py-4
-} */
-
-/* h3 {
-  @apply sm:text-[32px] text-center text-2xl
-} */
-
-/* .hero-container {
-  height: calc(100vh - 86px);
-} */
-
-
-.mouse {
-  width: 25px;
-  height: 40px;
-  border: 2px solid #ccc;
-  border-radius: 60px;
-  position: relative;
-  overflow: hidden;
+.card {
+  @apply bg-(--light-blue)/10 border border-white/10 
 }
 
-.mouse::before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 7px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #ccc;
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheel 1.3s infinite;
-  -webkit-animation: wheel 1.3s infinite;
+.dark .card {
+  @apply bg-black/30!
 }
 
-.mouseContainer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  /* display: grid; */
-  place-items: center;
+.hover-border {
+  @apply hover:border-(--gold)
 }
 
-.stackItem {
-  @apply w-[72px]
+.dark .hover-border {
+  @apply hover:border-(--light-blue)/70
+}
+
+.bg-highlight {
+  @apply bg-(--light-blue)/10
+}
+
+.dark .bg-highlight {
+  @apply bg-white/10
+}
+
+.footer-bg {
+  @apply bg-(--dark-blue)
+}
+
+.dark .footer-bg {
+  @apply bg-black/50
+}
+
+.hover-scale {
+  @apply hover:scale-105 transition-all duration-300
+}
+
+.orange-to-gold {
+  @apply text-(--dark-gold)
+}
+
+.dark .orange-to-gold {
+  @apply text-(--gold)
 }
 
 .scrollToTopButton {
@@ -120,38 +128,10 @@
   opacity: 1;
 }
 
-/* p, h1, h2, h3 {
-  @apply  text-white
-} */
 
-.fade {
-  @apply !opacity-0
-}
-.img-transition {
-  transition: opacity 2s ease-in-out;
-}
 
 .grecaptcha-badge { visibility: hidden; }
 
 
 
-@keyframes wheel {
-  to {
-      opacity: 0;
-      top: 27px
-  }
-}
 
-@-webkit-keyframes wheel {
-  to {
-      opacity: 0;
-      top: 27px
-  }
-}
-
-/* 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */

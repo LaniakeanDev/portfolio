@@ -1,52 +1,57 @@
-"use client"
+'use client';
 
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import contactSchema from '@/app/utils/validate';
 import postEmail from '@/app/api/email/postEmail';
-import CheckBox from "./CheckBox";
-import { useState } from "react";
+import CheckBox from './CheckBox';
+import { useState } from 'react';
 
-
-function ContactForm({lang}:{lang: supportedLanguages}) {
+function ContactForm({ lang }: { lang: TSupportedLanguages }) {
   const content = {
     sentMessage: {
       en: 'Your email has been sent successfully',
-      fr: 'Votre email a été envoyé avec succès'
+      fr: 'Votre email a été envoyé avec succès',
     },
     legalText: {
-      en: ['I consent to the processing of the information entered. This form is protected by reCAPTCHA. The Google','Privacy Policy', 'and','Terms of Service','apply'],
+      en: [
+        'I consent to the processing of the information entered. This form is protected by reCAPTCHA. The Google',
+        'Privacy Policy',
+        'and',
+        'Terms of Service',
+        'apply',
+      ],
       fr: [
         'Je consens au traitement des informations saisies. Ce formulaire est protégé par reCAPTCHA. Les',
         'Politique de confidentialité',
         'et',
         'Conditions d’utilisation',
-        'de Google s’appliquent'
-      ]
+        'de Google s’appliquent',
+      ],
     },
     submit: {
       en: 'Submit',
-      fr: 'Envoyer'
+      fr: 'Envoyer',
     },
     message: {
       en: 'Your message here',
-      fr: 'Votre message ici'
+      fr: 'Votre message ici',
     },
     name: {
       en: 'Name',
-      fr: 'Nom'
-    }
-  }
+      fr: 'Nom',
+    },
+  };
   const {
     formState: { isValid, errors },
     register,
     handleSubmit,
     reset,
-    watch
-  } = useForm<ContactFormData>({ 
-    mode: 'onBlur', 
-    reValidateMode: 'onChange', 
+    watch,
+  } = useForm<ContactFormData>({
+    mode: 'onBlur',
+    reValidateMode: 'onChange',
     resolver: zodResolver(contactSchema),
   });
 
@@ -66,35 +71,29 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ gRecaptchaToken })
-    }); 
+      body: JSON.stringify({ gRecaptchaToken }),
+    });
     const bodyData = await captchaRes.json();
     // console.log('bodyData:', bodyData);
     if (!bodyData.success) {
       return;
     }
     const response = await postEmail(data);
-    if (response.message === 'success') setIsSent(true)
+    if (response.message === 'success') setIsSent(true);
     reset();
   };
 
-
-  return isSent ? 
-    (
-      <div className="max-w-[600px] min-h-[657px] w-full p-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md grid place-items-center">
-        <p className="text-center">
-          Your email has been sent successfully
-        </p>
-      </div>
-    )
-    :
-    (
-    <form 
+  return isSent ? (
+    <div className="max-w-[600px] min-h-[657px] w-full p-6 min-[500px]:p-10 sm:p-16 bg-pfLightBlue rounded-md grid place-items-center">
+      <p className="text-center">Your email has been sent successfully</p>
+    </div>
+  ) : (
+    <form
       onSubmit={handleSubmit(submitHandler)}
       className="max-w-[400px] xs:max-w-[600px] py-8 px-6 min-[500px]:p-10 sm:p-16 card rounded-md"
     >
-      <input 
-        type="text" 
+      <input
+        type="text"
         aria-invalid={errors.name ? 'true' : 'false'}
         placeholder={content.name[lang]}
         {...register('name')}
@@ -151,31 +150,36 @@ function ContactForm({lang}:{lang: supportedLanguages}) {
             {...register('gdprAccepted')}
             disabled={false}
           />
-          <CheckBox 
-            isChecked={gdprAcceptedIsChecked} 
-            className="absolute top-0 left-0 w-4 h-4 z-0" 
+          <CheckBox
+            isChecked={gdprAcceptedIsChecked}
+            className="absolute top-0 left-0 w-4 h-4 z-0"
             height={16}
             width={16}
           />
         </div>
         <p className="w-[90%] text-xs mb-6 hidden text-white">
-          I consent to the processing of the information entered. {/*To learn more [about my rights and the purposes of the processing], I consult the privacy policy.*/} This form is protected by reCAPTCHA. The Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+          I consent to the processing of the information entered.{' '}
+          {/*To learn more [about my rights and the purposes of the processing], I consult the privacy policy.*/} This
+          form is protected by reCAPTCHA. The Google <a href="https://policies.google.com/privacy">Privacy Policy</a>{' '}
+          and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
         </p>
         <p className="w-[90%] text-xs mb-6 text-white">
-          {content.legalText[lang][0]} <a href="https://policies.google.com/privacy">{content.legalText[lang][1]}</a> {content.legalText[lang][2]} <a href="https://policies.google.com/terms">{content.legalText[lang][3]}</a> {content.legalText[lang][4]}.
+          {content.legalText[lang][0]} <a href="https://policies.google.com/privacy">{content.legalText[lang][1]}</a>{' '}
+          {content.legalText[lang][2]} <a href="https://policies.google.com/terms">{content.legalText[lang][3]}</a>{' '}
+          {content.legalText[lang][4]}.
         </p>
       </div>
       <div className="w-full grid place-items-end">
         <button
           className={`py-2 w-96 ${!isValid || !gdprAcceptedIsChecked ? 'opacity-50 !cursor-default' : ''} bg-pfYellow rounded-md cursor-pointer max-w-40 grid place-items-center text-black`}
           type="submit"
-          disabled={!isValid || !gdprAcceptedIsChecked }
+          disabled={!isValid || !gdprAcceptedIsChecked}
         >
           {content.submit[lang]}
         </button>
       </div>
     </form>
-  )
+  );
 
   // :
   // (
