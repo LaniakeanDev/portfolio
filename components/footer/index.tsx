@@ -22,7 +22,7 @@ export default function Footer({ lang }: ILang) {
         <ExternalLink href="https://github.com/LaniakeanDev" label="GitHub" className="text-white" />
         <ExternalLink href="mailto:laniakean.dev@gmail.com" label="Email" className="text-white" />
       </div>
-      <div className="h-px w-[80vw] max-w-3xl bg-slate-400/50 my-8" />
+      <div className="h-px w-[80vw] max-w-3xl bg-slate-400/50 mt-8 mb-0" />
       <p className="mb-4 text-xs 2xs:text-sm text-white">
         © {new Date().getFullYear()} {content.name[lang]} Zins • {content.built[lang]} Next.js
       </p>
