@@ -20,12 +20,12 @@ export default function Process({ lang }: ILang) {
           </li>
         ))}
       </ul>
-      <div className="w-[95vw] max-w-3xl mt-16">
+      <div className="w-[90vw] place-self-center max-w-3xl mt-16">
         <p className="mb-8">{content.whyIntro[lang]}</p>
         <Title level="h4" titleClassName="text-2xl my-4">
           {content.whyH4[lang]}
         </Title>
-        <ul className="list-disc">
+        <ul className="list-disc ml-4">
           {whyList.map((item, idx) => (
             <li key={`why${String(idx)}`}>
               <p className="py-1">

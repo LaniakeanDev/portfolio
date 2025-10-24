@@ -32,17 +32,17 @@ export default function Hero({ lang }: ILang) {
     },
   };
   return (
-    <PageSection id="top" className="min-h-[80vh] pt-32!">
-      <div className="flex flex-row gap-8 items-center mb-16">
-        <Title level="h1" titleClassName="text-5xl font-semibold font-[poppins]">
-          {content.name[lang]} <span className="text-(--gold)">Zins</span>
-        </Title>
-        <div className="w-32 h-32 relative -z-10 rounded-full">
+    <PageSection id="top" className="min-h-[80vh] pt-24! lg:pt-32!">
+      <div className="flex flex-col gap-4 xs:gap-8 items-center mb-16">
+        <div className="w-20 h-20 xs:w-24 xs:h-24 relative -z-10 rounded-full">
           <Image src="/self.png" fill alt={content.selfAlt[lang]} className="object-cover rounded-full" />
         </div>
+        <Title level="h1" titleClassName="text-4xl xs:text-5xl font-semibold font-[poppins]">
+          {content.name[lang]} <span className="text-(--gold)">Zins</span>
+        </Title>
       </div>
-      <p className="text-3xl mb-16">{content.tagline[lang]}</p>
-      <div className="flex gap-8 mb-16">
+      <p className="text-xl xs:text-2xl sm:text-3xl mb-16 text-center w-[90vw] max-w-xl!">{content.tagline[lang]}</p>
+      <div className="flex flex-col sm:flex-row gap-8 mb-16">
         <a
           href="#projects"
           className="text-lg font-semibold golden-gradient hover:bg-(--gold) transition duration-300 text-black rounded-md border-2 border-white px-16 py-2 cursor-pointer"
@@ -57,14 +57,16 @@ export default function Hero({ lang }: ILang) {
         </a>
       </div>
       <div className="w-full grid place-items-center">
-        <div className="flex flex-row gap-8 items-center">
+        <div className="flex flex-col xs:flex-row gap-8 items-center">
           <p className="text-xl">{content.findMe[lang]}</p>
-          <ExternalLink href="https://github.com/LaniakeanDev">
-            <IconComponent name="GitHub" className="w-10 h-10" />
-          </ExternalLink>
-          <ExternalLink href="https://www.linkedin.com/in/remyzins/">
-            <IconComponent name="LinkedIn" className="w-10 h-10" />
-          </ExternalLink>
+          <div className="flex flex-row gap-8 items-center">
+            <ExternalLink href="https://github.com/LaniakeanDev">
+              <IconComponent name="GitHub" className="w-10 h-10" />
+            </ExternalLink>
+            <ExternalLink href="https://www.linkedin.com/in/remyzins/">
+              <IconComponent name="LinkedIn" className="w-10 h-10" />
+            </ExternalLink>
+          </div>
         </div>
       </div>
     </PageSection>

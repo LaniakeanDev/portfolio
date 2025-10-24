@@ -7,12 +7,12 @@ import Button from '../button';
 
 export default function Projects({ lang }: ILang) {
   const btnStyle =
-    'py-2 px-4 bg-linear-to-tr from-(--gold)/40 hover:from-(--gold)/50 to-(--gold)/80 hover:to-(--gold) rounded-xl text-black font-semibold cursor-pointer transition duration-300 border border-white/50';
+    'py-2 px-1.5 2xs:px-3 xs:px-4 text-sm 2xs:text-base bg-linear-to-tr from-(--gold)/40 hover:from-(--gold)/50 to-(--gold)/80 hover:to-(--gold) rounded-xl text-black font-semibold cursor-pointer transition duration-300 border border-white/50';
   return (
     <PageSection id="projects" title={content.title[lang]}>
-      <ul className="flex flex-row flex-wrap justify-center gap-8">
+      <ul className="flex flex-row flex-wrap justify-center gap-16">
         {projects.map((project, idx) => (
-          <li key={`prj${String(idx)}`} className="min-h-[528px] w-[95vw] max-w-sm rounded-2xl card">
+          <li key={`prj${String(idx)}`} className="min-h-[528px] w-[90vw] max-w-sm rounded-2xl card">
             <div className="w-full h-48 relative">
               <MiniSlider lang={lang} slides={project.slides} />
             </div>
@@ -21,7 +21,7 @@ export default function Projects({ lang }: ILang) {
                 {project.title[lang]}
               </Title>
               <p className="text-sm mb-4">{project.description[lang]}</p>
-              <ul className="flex flex-row items-center gap-2 my-2">
+              <ul className="flex flex-row items-center justify-between gap-2 my-2">
                 {project.tech.map((tech, idx) => (
                   <li key={`${project.title[lang]}-tech-${String(idx)}`} className="px-2 dark:bg-white/10 rounded-md">
                     <p>{tech}</p>

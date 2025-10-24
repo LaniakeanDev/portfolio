@@ -5,7 +5,7 @@ import Title from '../title';
 export default function About({ lang }: ILang) {
   return (
     <PageSection id="about" title={content.title[lang]}>
-      <div className="max-w-4xl">
+      <div className="w-[90vw] max-w-4xl">
         {/* <Title level="h3" titleClassName="text-3xl my-4">
           {content.who[lang]}
         </Title> */}
