@@ -1,7 +1,12 @@
+'use client';
+
 import PageSection from '../section';
 import Title from '../title';
 import StackItem from './stack-item';
 import { content } from './content';
+import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
+import { slideLeftwardsVariants } from '@/lib/motion-variants';
 
 interface StackSectionProps {
   items: IStackItem[];
@@ -9,8 +14,19 @@ interface StackSectionProps {
 }
 
 function StackSection({ items, title }: StackSectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-40%' });
   return (
-    <div className="w-full">
+    <motion.div
+      className="w-full"
+      initial="initial"
+      animate={isInView ? 'animate' : 'initial'}
+      variants={slideLeftwardsVariants}
+      ref={ref}
+      transition={{
+        duration: 1.5,
+      }}
+    >
       <Title level="h3" titleClassName="text-2xl mb-12 text-center md:text-left">
         {title}
       </Title>
@@ -19,7 +35,7 @@ function StackSection({ items, title }: StackSectionProps) {
           <StackItem id={item.id} hasDarkVersion={item.hasDarkVersion} key={`stack-item-${title}-${String(idx)}`} />
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 }
 

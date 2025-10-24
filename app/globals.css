@@ -8,6 +8,7 @@
   --background: #e5e6ff;
   --foreground: #00032e;
   --gold: #f5be08;
+  --dark-gold: #d7a500;
   --light-blue: #000dc4;
   --dark-blue: #00032e;
 }
@@ -71,7 +72,7 @@ p {
 }
 
 .dark .title-color {
-  @apply text-(--gold)
+  @apply text-(--gold)/80
 }
 
 .card {
@@ -110,6 +111,13 @@ p {
   @apply hover:scale-105 transition-all duration-300
 }
 
+.orange-to-gold {
+  @apply text-(--dark-gold)
+}
+
+.dark .orange-to-gold {
+  @apply text-(--gold)
+}
 
 .scrollToTopButton {
   cursor: pointer;

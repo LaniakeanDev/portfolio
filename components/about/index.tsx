@@ -1,24 +1,35 @@
+'use client';
+
 import PageSection from '../section';
 import { content /*whyList */ } from './content';
 import Title from '../title';
+import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
+import { slideLeftwardsVariants } from '@/lib/motion-variants';
 
 export default function About({ lang }: ILang) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-40%' });
   return (
     <PageSection id="about" title={content.title[lang]}>
       <div className="w-[90vw] max-w-4xl">
-        {/* <Title level="h3" titleClassName="text-3xl my-4">
-          {content.who[lang]}
-        </Title> */}
-
-        {/* <div className="bg-white/10 rounded-lg mb-16 p-12"> */}
         <p className="mb-4 xl:text-xl">{content.iam[lang]}</p>
         <p className="mb-16 xl:text-xl">{content.iam2[lang]}</p>
-        <Title level="h4" titleClassName="text-2xl xl:text-3xl my-4">
-          {content.journeyH4[lang]}
-        </Title>
-        <p className="mb-4 xl:text-xl">{content.journeyContent.p1[lang]}</p>
-        <p className="xl:text-xl">{content.journeyContent.p2[lang]}</p>
-        {/* </div> */}
+        <motion.div
+          initial="initial"
+          animate={isInView ? 'animate' : 'initial'}
+          variants={slideLeftwardsVariants}
+          ref={ref}
+          transition={{
+            duration: 1.5,
+          }}
+        >
+          <Title level="h4" titleClassName="text-2xl xl:text-3xl my-4">
+            {content.journeyH4[lang]}
+          </Title>
+          <p className="mb-4 xl:text-xl">{content.journeyContent.p1[lang]}</p>
+          <p className="xl:text-xl">{content.journeyContent.p2[lang]}</p>
+        </motion.div>
       </div>
     </PageSection>
   );
