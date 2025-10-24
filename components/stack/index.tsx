@@ -6,7 +6,7 @@ import StackItem from './stack-item';
 import { content } from './content';
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
-import { slideLeftwardsVariants } from '@/lib/motion-variants';
+import { slideUpwardsVariants } from '@/lib/motion-variants';
 
 interface StackSectionProps {
   items: IStackItem[];
@@ -21,7 +21,7 @@ function StackSection({ items, title }: StackSectionProps) {
       className="w-full"
       initial="initial"
       animate={isInView ? 'animate' : 'initial'}
-      variants={slideLeftwardsVariants}
+      variants={slideUpwardsVariants}
       ref={ref}
       transition={{
         duration: 1.5,

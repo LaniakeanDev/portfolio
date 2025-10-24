@@ -9,7 +9,7 @@ interface MiniSliderProps extends ILang {
   autoPlayInterval?: number;
 }
 
-export default function MiniSlider({ slides, className = '', autoPlayInterval = 5000, lang }: MiniSliderProps) {
+export default function MiniSlider({ slides, className = '', autoPlayInterval = 3000, lang }: MiniSliderProps) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const slideCount = slides.length;
 
@@ -33,7 +33,7 @@ export default function MiniSlider({ slides, className = '', autoPlayInterval = 
         ))}
       </div>
       <div className="absolute bottom-0 h-6 w-full grid place-items-center">
-        <div className="flex flex-row gap-2 z-20">
+        <div className="flex flex-row gap-2 z-10">
           {Array.from({ length: slideCount }).map((_, idx) => (
             <div
               key={`dot-${String(idx)}`}

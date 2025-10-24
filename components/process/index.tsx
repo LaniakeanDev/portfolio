@@ -1,5 +1,6 @@
 import PageSection from '../section';
 import Title from '../title';
+import ProcessTitle from './process-title';
 import { steps, content, whyList } from './content';
 
 export default function Process({ lang }: ILang) {
@@ -12,26 +13,24 @@ export default function Process({ lang }: ILang) {
             className="card hover-border w-[95vw] max-w-sm p-8 rounded-2xl hover-scale select-none"
           >
             <div className="w-full grid place-items-center mb-4">
-              <div className="golden-gradient rounded-full w-10 h-10 grid place-items-center">
-                <p className="text-2xl font-bold text-black">{String(idx + 1)}</p>
+              <div className="golden-gradient rounded-full w-8 h-8 xs:w-10 xs:h-10 grid place-items-center">
+                <p className="text-xl xs:text-2xl font-bold text-black">{String(idx + 1)}</p>
               </div>
             </div>
-            <Title level="h3" titleClassName="text-center text-2xl font-semibold mb-4 title-color">
-              {step.title[lang]}
-            </Title>
+            <ProcessTitle label={step.title[lang]} />
             <p>{step.description[lang]}</p>
           </li>
         ))}
       </ul>
       <div className="w-[90vw] place-self-center max-w-3xl mt-16">
-        <p className="mb-8">{content.whyIntro[lang]}</p>
+        <p className="mb-8 text-lg">{content.whyIntro[lang]}</p>
         <Title level="h4" titleClassName="text-2xl my-4">
           {content.whyH4[lang]}
         </Title>
         <ul className="list-disc ml-4">
           {whyList.map((item, idx) => (
             <li key={`why${String(idx)}`}>
-              <p className="py-1">
+              <p className="py-1 mb-4 xs:text-lg">
                 <span className="font-semibold">{item.title[lang]}</span>: <span>{item.content[lang]}</span>
               </p>
             </li>

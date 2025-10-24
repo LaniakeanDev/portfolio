@@ -14,7 +14,7 @@ export default function Footer({ lang }: ILang) {
           <span className="text-(--gold)">{content.name[lang]}</span> Zins
         </Title>
       </div>
-      <p className="text-xl 2xl:text-2xl max-w-sm text-center text-white">
+      <p className="text-xl 2xl:text-2xl max-w-2xs xs:max-w-sm text-center text-white">
         {content.designation[lang]} {/*•*/} Avignon / Marseille, France
       </p>
       <div className="flex flex-row gap-4">
