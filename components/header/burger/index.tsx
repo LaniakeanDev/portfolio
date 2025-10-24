@@ -86,7 +86,7 @@ export default function BurgerMenu({ menuItems, className }: BurgerMenuProps) {
         <div className="flex flex-col h-full">
           {/* Menu Header */}
           <div className="p-6 border-b border-(--foreground)/30">
-            <h2 className="text-xl font-cardo font-bold text-(--foreground)">Navigation</h2>
+            <h2 className="text-xl font-cardo font-bold text-foreground">Navigation</h2>
           </div>
 
           {/* Menu Items */}
@@ -94,7 +94,7 @@ export default function BurgerMenu({ menuItems, className }: BurgerMenuProps) {
             <ul className="space-y-1 px-4">
               {menuItems.map((item, index) => (
                 <li key={`burger-${String(index)}`}>
-                  <a href={item.href}>
+                  <a href={item.href} onClick={toggleMenu}>
                     <p className="p-4 text-xl">{item.label}</p>
                   </a>
                 </li>
