@@ -30,7 +30,7 @@ export default function PageSection({ children, className = '', id = '', title }
       {title && (
         <Title
           level="h2"
-          titleClassName="mb-16 sm:mb-20 md:mb-24 text-center text-2xl 2xs:text-3xl sm:text-5xl font-semibold title-color"
+          titleClassName="mb-16 sm:mb-20 md:mb-24 text-center text-3xl sm:text-5xl font-semibold title-color"
         >
           {title}
         </Title>

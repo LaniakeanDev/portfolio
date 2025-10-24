@@ -118,7 +118,7 @@ export const projects: IProject[] = [
       fr: 'Développeur FullStack',
     },
     githubLink: {
-      href: '/eva',
+      href: 'https://github.com/LaniakeanDev/portfolio',
     },
   },
 
@@ -171,7 +171,7 @@ export const projects: IProject[] = [
       href: 'https://www.buddha-vacana.org/fr/index.html',
     },
     githubLink: {
-      href: '/eva',
+      href: 'https://github.com/LaniakeanDev/buddha-vacana',
     },
   },
 ];
