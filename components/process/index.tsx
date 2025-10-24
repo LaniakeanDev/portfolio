@@ -7,13 +7,16 @@ export default function Process({ lang }: ILang) {
     <PageSection title={content.title[lang]}>
       <ul className="flex flex-row flex-wrap justify-center gap-8">
         {steps.map((step, idx) => (
-          <li key={`step${String(idx)}`} className="card w-[95vw] max-w-sm p-8 rounded-2xl hover-scale select-none">
+          <li
+            key={`step${String(idx)}`}
+            className="card hover-border w-[95vw] max-w-sm p-8 rounded-2xl hover-scale select-none"
+          >
             <div className="w-full grid place-items-center mb-4">
               <div className="golden-gradient rounded-full w-10 h-10 grid place-items-center">
                 <p className="text-2xl font-bold text-black">{String(idx + 1)}</p>
               </div>
             </div>
-            <Title level="h3" titleClassName="text-center text-2xl font-semibold mb-4 text-(--gold)">
+            <Title level="h3" titleClassName="text-center text-2xl font-semibold mb-4 title-color">
               {step.title[lang]}
             </Title>
             <p>{step.description[lang]}</p>

@@ -37,7 +37,7 @@ export default function MiniSlider({ slides, className = '', autoPlayInterval = 
           {Array.from({ length: slideCount }).map((_, idx) => (
             <div
               key={`dot-${String(idx)}`}
-              className={`p-1 h-1 w-1 cursor-pointer rounded-full ${idx === currentSlideIndex ? 'bg-blue-500' : 'bg-slate-400'} ${className}`}
+              className={`p-1 h-1 w-1 cursor-pointer rounded-full ${idx === currentSlideIndex ? 'bg-(--gold)' : 'bg-slate-400'} ${className}`}
             />
           ))}
         </div>

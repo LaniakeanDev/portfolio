@@ -3,34 +3,9 @@ import Title from '../title';
 import Image from 'next/image';
 import IconComponent from '../icon/IconComponent';
 import { ExternalLink } from '../link';
+import { content } from './content';
 
 export default function Hero({ lang }: ILang) {
-  const content = {
-    name: {
-      en: 'Remy',
-      fr: 'Rémy',
-    },
-    tagline: {
-      en: 'FullStack developer specializing in modern web applications',
-      fr: 'Développeur FullStack spécialisé dans les applications web modernes',
-    },
-    projectBtn: {
-      en: 'View My Work',
-      fr: 'Voir Mon Travail',
-    },
-    contactBtn: {
-      en: 'Get In Touch',
-      fr: 'Me Contacter',
-    },
-    findMe: {
-      en: 'Find me on',
-      fr: 'Retrouvez-moi sur',
-    },
-    selfAlt: {
-      en: 'Picture of Myself',
-      fr: 'Photo de moi-même',
-    },
-  };
   return (
     <PageSection id="top" className="min-h-[80vh] pt-24! lg:pt-32!">
       <div className="flex flex-col gap-4 xs:gap-8 items-center mb-16">
@@ -51,7 +26,7 @@ export default function Hero({ lang }: ILang) {
         </a>
         <a
           href="mailto:laniakean.dev@gmail.com"
-          className="text-lg font-semibold hover:bg-(--gold) hover:text-black transition duration-300 rounded-md border-2 border-white px-16 py-2 cursor-pointer"
+          className="text-lg font-semibold hover:bg-(--gold) hover:text-black transition duration-300 rounded-md border-2 border-(--gold) hover:border-white px-16 py-2 cursor-pointer"
         >
           {content.contactBtn[lang]}
         </a>
