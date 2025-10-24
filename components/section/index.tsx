@@ -1,4 +1,9 @@
+'use client';
+
 import Title from '../title';
+import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
+import { slideUpwardsVariants } from '@/lib/motion-variants';
 
 interface PageSectionProps {
   children: React.ReactNode;
@@ -8,8 +13,17 @@ interface PageSectionProps {
 }
 
 export default function PageSection({ children, className = '', id = '', title }: PageSectionProps) {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: '-40%' });
   return (
-    <section
+    <motion.section
+      initial="initial"
+      animate={isInView ? 'animate' : 'initial'}
+      variants={slideUpwardsVariants}
+      ref={sectionRef}
+      transition={{
+        duration: 1.5,
+      }}
       className={`flex flex-col justify-center items-center px-2 sm:px-6 py-16 w-full mb-16 ${className}`}
       id={id}
     >
@@ -22,6 +36,6 @@ export default function PageSection({ children, className = '', id = '', title }
         </Title>
       )}
       {children}
-    </section>
+    </motion.section>
   );
 }
