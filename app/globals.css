@@ -40,7 +40,7 @@ body {
 .dark {
   --background: #00032e;
   background: var(--background);  
-  --foreground: #cacdff;
+  --foreground: #e5e6ff;
 }
 
 html {
@@ -88,7 +88,7 @@ p {
 }
 
 .dark .hover-border {
-  @apply hover:border-(--light-blue)
+  @apply hover:border-(--light-blue)/70
 }
 
 .bg-highlight {

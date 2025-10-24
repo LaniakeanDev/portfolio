@@ -6,6 +6,10 @@ import bv1 from './assets/bv1.png';
 import bv2 from './assets/bv2.png';
 import bv3 from './assets/bv3.png';
 import bv4 from './assets/bv4.png';
+import pf1 from './assets/pf1.png';
+import pf2 from './assets/pf2.png';
+import pf3 from './assets/pf3.png';
+import pf4 from './assets/pf4.png';
 
 export const content = {
   title: {
@@ -71,31 +75,31 @@ export const projects: IProject[] = [
   {
     slides: [
       {
-        src: eva1,
+        src: pf1,
         alt: {
-          fr: 'Haut de page d’Accueil sur le site de l’EVA',
-          en: 'Homepage Header on the EVA Website',
+          fr: 'Haut de page d’Accueil de ce site portfolio',
+          en: 'Homepage Header of this portfolio Website',
         },
       },
       {
-        src: eva2,
+        src: pf2,
         alt: {
-          fr: 'Section Localisation des Répétitions sur le site de l’EVA',
-          en: 'Rehearsals Location Section on the EVA Website',
+          fr: 'Section Mon Stack de ce site portfolio',
+          en: 'My Stack Section of this portfolio Website',
         },
       },
       {
-        src: eva3,
+        src: pf3,
         alt: {
-          fr: 'Pied de page du site de l’EVA',
-          en: 'EVA Website Footer',
+          fr: 'Section Services de ce site portfolio',
+          en: 'Services Section of this portfolio Website',
         },
       },
       {
-        src: eva4,
+        src: pf4,
         alt: {
-          fr: 'Frise temporelle sur le site de l’EVA',
-          en: 'Historical Timeline on the EVA Website',
+          fr: 'Section Projets de ce site portfolio',
+          en: 'Projects Section of this portfolio Website',
         },
       },
     ],
