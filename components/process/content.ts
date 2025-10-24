@@ -8,8 +8,8 @@ export const content = {
     fr: 'À quoi vous attendre',
   },
   whyIntro: {
-    en: 'I understand that hiring a developer means trusting someone with your vision, not just their technical chops.',
-    fr: "Je comprends qu'embaucher un développeur signifie confier votre vision à quelqu'un, pas seulement ses compétences techniques.",
+    en: 'I understand that hiring a developer means trusting someone with your vision.',
+    fr: "Je comprends qu'embaucher un développeur signifie confier votre vision à quelqu'un.",
   },
 };
 

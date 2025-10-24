@@ -45,13 +45,13 @@ export default function Hero({ lang }: ILang) {
         <div className="flex flex-col sm:flex-row gap-8 mb-16">
           <a
             href="#projects"
-            className="text-lg font-semibold golden-gradient hover:bg-(--gold) transition duration-300 text-black rounded-md border-2 border-white px-16 py-2 cursor-pointer"
+            className="text-lg font-semibold golden-gradient hover:bg-(--gold) transition duration-300 text-black rounded-md border-2 border-white px-16 py-2 cursor-pointer grid place-items-center"
           >
             {content.projectBtn[lang]}
           </a>
           <a
             href="mailto:laniakean.dev@gmail.com"
-            className="text-lg font-semibold hover:bg-(--gold) hover:text-black transition duration-300 rounded-md border-2 border-(--gold) hover:border-white px-16 py-2 cursor-pointer"
+            className="text-lg font-semibold hover:bg-(--gold) hover:text-black transition duration-300 rounded-md border-2 border-(--gold) hover:border-white px-16 py-2 cursor-pointer grid place-items-center"
           >
             {content.contactBtn[lang]}
           </a>
