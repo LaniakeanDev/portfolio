@@ -16,7 +16,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ icon, title, description, list /* lang */ }: ServiceCardProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-40%' });
+  const isInView = useInView(ref, { once: true, margin: '-20%' });
   return (
     <li className="rounded-2xl px-4 py-8 xs:p-8 w-[90vw] max-w-md min-h-[500px] select-none hover-scale card hover-border">
       <IconComponent name={icon} className="w-12 h-12 mb-4" />
