@@ -12,7 +12,7 @@ import { opacityVariants, slideUpwardsVariants } from '@/lib/motion-variants';
 
 export default function Hero({ lang }: ILang) {
   const nameRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(nameRef, { once: true, margin: '-40%' });
+  const isInView = useInView(nameRef, { once: true, margin: '-30%' });
   return (
     <PageSection id="top" className="min-h-[80vh] pt-24! lg:pt-32!">
       <motion.div

@@ -5,7 +5,7 @@ import { content } from './content';
 export default function Services({ lang }: ILang) {
   return (
     <PageSection id="services" title={content.title[lang]}>
-      <ul className="flex flex-row gap-16 flex-wrap justify-center max-w-7xl">
+      <ul className="flex flex-row gap-16 flex-wrap justify-center">
         {content.services.map((card, idx) => (
           <ServiceCard
             key={`service-${String(idx)}`}
