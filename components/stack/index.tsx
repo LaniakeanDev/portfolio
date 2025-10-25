@@ -15,7 +15,7 @@ interface StackSectionProps {
 
 function StackSection({ items, title }: StackSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-40%' });
+  const isInView = useInView(ref, { once: true, margin: '-30%' });
   return (
     <motion.div
       className="w-full"

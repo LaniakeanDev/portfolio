@@ -14,7 +14,7 @@ interface PageSectionProps {
 
 export default function PageSection({ children, className = '', id = '', title }: PageSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: true, margin: '-40%' });
+  const isInView = useInView(sectionRef, { once: true, margin: '-30%' });
   return (
     <motion.section
       initial="initial"

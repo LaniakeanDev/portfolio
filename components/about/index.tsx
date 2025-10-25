@@ -9,7 +9,7 @@ import { slideUpwardsVariants } from '@/lib/motion-variants';
 
 export default function About({ lang }: ILang) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-40%' });
+  const isInView = useInView(ref, { once: true, margin: '-30%' });
   return (
     <PageSection id="about" title={content.title[lang]}>
       <div className="w-[90vw] max-w-4xl">
