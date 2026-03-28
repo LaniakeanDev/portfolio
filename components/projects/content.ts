@@ -2,6 +2,10 @@ import eva1 from './assets/eva1.png';
 import eva2 from './assets/eva2.png';
 import eva3 from './assets/eva3.png';
 import eva4 from './assets/eva4.png';
+import moutons1 from './assets/moutons1.png';
+import moutons2 from './assets/moutons2.png';
+import moutons3 from './assets/moutons3.png';
+import moutons4 from './assets/moutons4.png';
 import bv1 from './assets/bv1.png';
 import bv2 from './assets/bv2.png';
 import bv3 from './assets/bv3.png';
@@ -19,6 +23,62 @@ export const content = {
 };
 
 export const projects: IProject[] = [
+  {
+    slides: [
+      {
+        src: moutons1,
+        alt: {
+          fr: 'Haut de page d’Accueil sur le site des Moutons Marseillais',
+          en: 'Homepage Header on the Moutons Marseillais Website',
+        },
+      },
+      {
+        src: moutons2,
+        alt: {
+          fr: 'Partenaires et Footer du site des Moutons Marseillais',
+          en: 'Partners and Footer on the Moutons Marseillais Website',
+        },
+      },
+      {
+        src: moutons3,
+        alt: {
+          fr: 'Page A Propos du site des Moutons Marseillais',
+          en: 'About Page on the Moutons Marseillais Website',
+        },
+      },
+      {
+        src: moutons4,
+        alt: {
+          fr: 'Liste des brebis du site des Moutons Marseillais',
+          en: 'Sheep list on the Moutons Marseillais Website',
+        },
+      },
+    ],
+    title: {
+      en: 'Les Moutons Marseillais',
+      fr: 'Les Moutons Marseillais',
+    },
+    tech: ['React', 'Next.js', 'Tailwind'],
+    description: {
+      en: 'Completely rebuilt the Moutons Marseillais website with a modern architecture and intuitive user experience. The new platform has significantly enhanced the organization’s online visibility and member engagement.',
+      fr: 'Refonte complète du site web des Moutons Marseillais avec une architecture moderne et une expérience utilisateur intuitive. La nouvelle plateforme a considérablement amélioré la visibilité en ligne et l’engagement des membres de l’association.',
+    },
+    dates: '2026',
+    role: {
+      en: 'FrontEnd Developer',
+      fr: 'Développeur FrontEnd',
+    },
+    // caseStudy: {
+    //   href: '/eva',
+    // },
+    liveLink: {
+      href: 'https://www.lesmoutonsmarseillais.fr',
+    },
+    githubLink: {
+      href: 'https://github.com/LaniakeanDev/moutons-marseille',
+    },
+  },
+
   {
     slides: [
       {
